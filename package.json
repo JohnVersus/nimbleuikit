@@ -13,5 +13,5 @@
     "turbo": "^1.9.3"
   },
   "packageManager": "pnpm@7.15.0",
-  "name": "my-turborepo"
+  "name": "nimbleuikit"
 }
