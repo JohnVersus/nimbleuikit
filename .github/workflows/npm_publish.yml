@@ -3,7 +3,7 @@ name: Publish Packages
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   changesets:
@@ -24,7 +24,7 @@ jobs:
         run: npm install -g pnpm
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --no-frozen-lockfile
         working-directory: ./
 
       - name: Run tests
