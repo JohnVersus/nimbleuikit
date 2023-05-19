@@ -27,5 +27,5 @@
     "outDir": "./build"
   },
   "include": ["**/*.ts", "**/*.tsx"],
-  "exclude": ["src/stories", "src/tests"]
+  "exclude": ["src/stories", "src/tests", "node_modules"]
 }
