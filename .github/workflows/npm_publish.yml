@@ -1,0 +1,47 @@
+name: Publish Packages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  changesets:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Install PNPM
+        run: npm install -g pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+        working-directory: ./
+
+      - name: Run tests
+        run: pnpm test
+        working-directory: ./
+
+      - name: Build
+        run: pnpm run build
+        working-directory: ./packages/atoms
+
+      - name: Setup npmrc
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
+
+      - name: Changesets Action
+        uses: changesets/action@v1
+        with:
+          publish: pnpm publish --access public
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
