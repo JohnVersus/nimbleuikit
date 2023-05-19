@@ -2,8 +2,12 @@
   "name": "@nimbleuikit/atoms",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "build/index.js",
+  "files": [
+    "build"
+  ],
   "scripts": {
+    "build": "tsc",
     "ci:publish": "pnpm run build && pnpm publish --access public"
   },
   "keywords": [],
