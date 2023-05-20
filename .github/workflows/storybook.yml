@@ -29,11 +29,8 @@ jobs:
       - name: Install Github Pages
         run: pnpm add -Dw gh-pages
 
-      - name: Build
-        run: pnpm build
-
-      - name: Test
-        run: pnpm vitest --run --update
+      - name: Run tests
+        run: pnpm run test
 
       - name: Build Storybook
         run: pnpm build-storybook
