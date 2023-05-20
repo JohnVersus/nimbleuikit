@@ -98,12 +98,10 @@ importers:
       react-dom: ^18.2.0
       tsconfig: workspace:*
       typescript: ^4.5.3
-      ui: workspace:*
     dependencies:
       next: 13.4.3_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      ui: link:../../packages/ui
     devDependencies:
       '@types/node': 17.0.45
       '@types/react': 18.2.6
@@ -123,12 +121,10 @@ importers:
       react-dom: ^18.2.0
       tsconfig: workspace:*
       typescript: ^4.5.3
-      ui: workspace:*
     dependencies:
       next: 13.4.3_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      ui: link:../../packages/ui
     devDependencies:
       '@types/node': 17.0.45
       '@types/react': 18.2.6
@@ -163,24 +159,6 @@ importers:
 
   packages/tsconfig:
     specifiers: {}
-
-  packages/ui:
-    specifiers:
-      '@types/react': ^18.2.0
-      '@types/react-dom': ^18.2.0
-      eslint: ^7.32.0
-      eslint-config-custom: workspace:*
-      react: ^17.0.2
-      tsconfig: workspace:*
-      typescript: ^4.5.2
-    devDependencies:
-      '@types/react': 18.2.6
-      '@types/react-dom': 18.2.4
-      eslint: 7.32.0
-      eslint-config-custom: link:../eslint-config-custom
-      react: 17.0.2
-      tsconfig: link:../tsconfig
-      typescript: 4.9.5
 
 packages:
 
@@ -13257,14 +13235,6 @@ packages:
       react-is: 18.2.0
       react-shallow-renderer: 16.15.0_react@18.2.0
       scheduler: 0.23.0
-    dev: true
-
-  /react/17.0.2:
-    resolution: {integrity: sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA==}
-    engines: {node: '>=0.10.0'}
-    dependencies:
-      loose-envify: 1.4.0
-      object-assign: 4.1.1
     dev: true
 
   /react/18.2.0:
