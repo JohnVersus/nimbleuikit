@@ -5,43 +5,53 @@ on:
     branches:
       - main
 
+env:
+  CI: true
+  PNPM_CACHE_FOLDER: .pnpm-store
 jobs:
-  changesets:
+  release:
+    timeout-minutes: 15
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout repo
         uses: actions/checkout@v2
         with:
+          # This makes action fetch all Git history so that Changesets can generate changelogs with the correct commits
           fetch-depth: 0
 
-      - name: Setup Node.js
+        #Install pnpm
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2.2.2
+        with:
+          version: 7.15.0
+
+      - name: Use Node
         uses: actions/setup-node@v2
         with:
-          node-version: 18.12.1
-          registry-url: "https://registry.npmjs.org"
+          node-version: 16
 
-      - name: Install PNPM
-        run: npm install -g pnpm
+      - name: Setup npmrc
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > .npmrc
 
-      - name: Install dependencies
-        run: pnpm install --no-frozen-lockfile
-        working-directory: ./
+      - name: setup pnpm config
+        run: pnpm config set store-dir $PNPM_CACHE_FOLDER
 
-      - name: Run tests
+      - name: Install
+        run: pnpm install
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+
+      - name: Test
         run: pnpm test
-        working-directory: ./
 
       - name: Build
         run: pnpm run build
         working-directory: ./packages/atoms
 
-      - name: Setup npmrc
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
-
-      - name: Changesets Action
+      - name: Publish Atoms
         uses: changesets/action@v1
         with:
-          publish: pnpm publish --access public
+          publish: cd packages/atoms && pnpm publish --access public
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}

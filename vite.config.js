@@ -1,3 +1,1 @@
-export default {
-  base: "/nimbleuikit/",
-};
+export default {};
