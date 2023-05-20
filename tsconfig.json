@@ -22,7 +22,10 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "types": ["jest", "node"]
+    "types": ["jest", "node"],
+    "rootDir": "**/**/src",
+    "outDir": "./build"
   },
-  "include": ["**/*.ts", "**/*.tsx"]
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["src/stories", "src/tests", "node_modules"]
 }
