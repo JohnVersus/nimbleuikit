@@ -9,7 +9,7 @@ env:
   CI: true
   PNPM_CACHE_FOLDER: .pnpm-store
 jobs:
-  release:
+  publish:
     timeout-minutes: 15
     runs-on: ubuntu-latest
     steps:
@@ -21,9 +21,12 @@ jobs:
 
         #Install pnpm
       - name: Install pnpm
-        uses: pnpm/action-setup@v2.2.2
+        uses: pnpm/action-setup@v2.2.4
         with:
           version: 7.15.0
+          run_install: |
+            - recursive: true
+              args: [--frozen-lockfile]
 
       - name: Use Node
         uses: actions/setup-node@v2
@@ -35,11 +38,6 @@ jobs:
 
       - name: setup pnpm config
         run: pnpm config set store-dir $PNPM_CACHE_FOLDER
-
-      - name: Install
-        run: pnpm install --no-frozen-lockfile
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
 
       - name: Test
         run: pnpm test
