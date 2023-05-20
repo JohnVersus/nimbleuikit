@@ -37,7 +37,7 @@ jobs:
         run: pnpm config set store-dir $PNPM_CACHE_FOLDER
 
       - name: Install
-        run: pnpm install
+        run: pnpm install --no-frozen-lockfile
         env:
           NPM_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
 
