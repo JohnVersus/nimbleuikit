@@ -1,6 +1,14 @@
 {
-  "changelog": "@changesets/cli/changelog",
+  "$schema": "https://unpkg.com/@changesets/config@2.1.0/schema.json",
+  "changelog": [
+    "@changesets/changelog-github",
+    { "repo": "JohnVersus/nimbleuikit" }
+  ],
   "commit": true,
-  "linked": [],
-  "baseBranch": "main"
+  "fixed": [["nimbleuikit"]],
+  "linked": [["@nimbleuikit/*"]],
+  "access": "public",
+  "baseBranch": "main",
+  "updateInternalDependencies": "patch",
+  "ignore": []
 }
