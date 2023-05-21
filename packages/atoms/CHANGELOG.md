@@ -1,6 +1,6 @@
 # @nimbleuikit/atoms
 
-## 0.1.0
+## 0.0.3
 
 ### Minor Changes
 
@@ -11,3 +11,9 @@
 ### Major Changes
 
 - b159e36: Initial release with Box component.
+
+## 0.0.1
+
+### Initial Commit
+
+- Initial release.

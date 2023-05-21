@@ -18,5 +18,8 @@
     "react-dom": "^18.2.0",
     "styled-components": "^5.3.9",
     "styled-system": "^5.1.5"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
