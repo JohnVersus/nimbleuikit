@@ -7,7 +7,8 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "test": "jest",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "publish-atoms": "cd packages/atoms && pnpm publish --access public"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.21.5",
