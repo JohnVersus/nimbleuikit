@@ -5,8 +5,7 @@
     { "repo": "JohnVersus/nimbleuikit" }
   ],
   "commit": true,
-  "fixed": [["nimbleuikit"]],
-  "linked": [["@nimbleuikit/*"]],
+  "linked": [],
   "access": "public",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
