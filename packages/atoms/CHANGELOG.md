@@ -1,6 +1,6 @@
 # @nimbleuikit/atoms
 
-## 1.0.0
+## 0.0.2
 
 ### Major Changes
 
