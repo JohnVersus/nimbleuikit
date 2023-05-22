@@ -23,8 +23,6 @@ importers:
       '@types/node': '16'
       '@types/react': ^18.2.6
       '@types/react-dom': ^18.2.4
-      '@types/styled-components': ^5.1.26
-      '@types/styled-system': ^5.1.16
       '@types/testing-library__jest-dom': ^5.14.5
       '@typescript-eslint/eslint-plugin': ^5.59.6
       '@typescript-eslint/parser': ^5.59.6
@@ -68,8 +66,6 @@ importers:
       '@types/node': 16.18.31
       '@types/react': 18.2.6
       '@types/react-dom': 18.2.4
-      '@types/styled-components': 5.1.26
-      '@types/styled-system': 5.1.16
       '@types/testing-library__jest-dom': 5.14.5
       '@typescript-eslint/eslint-plugin': 5.59.6_d3zyi5uuxqs7u7qujqskjepfg4
       '@typescript-eslint/parser': 5.59.6_cgdknpc562nnyruteofhkegnom
@@ -114,6 +110,7 @@ importers:
 
   apps/web:
     specifiers:
+      '@nimbleuikit/atoms': workspace:*
       '@types/node': ^17.0.12
       '@types/react': ^18.0.22
       '@types/react-dom': ^18.0.7
@@ -124,6 +121,7 @@ importers:
       tsconfig: workspace:*
       typescript: ^4.5.3
     dependencies:
+      '@nimbleuikit/atoms': link:../../packages/atoms
       next: 13.4.3_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
@@ -137,11 +135,15 @@ importers:
 
   packages/atoms:
     specifiers:
+      '@types/styled-components': ^5.1.26
+      '@types/styled-system': ^5.1.16
       react: ^18.2.0
       react-dom: ^18.2.0
       styled-components: ^5.3.9
       styled-system: ^5.1.5
     dependencies:
+      '@types/styled-components': 5.1.26
+      '@types/styled-system': 5.1.16
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       styled-components: 5.3.10_7i5myeigehqah43i5u7wbekgba
@@ -4525,7 +4527,7 @@ packages:
     dependencies:
       '@types/react': 18.2.6
       hoist-non-react-statics: 3.3.2
-    dev: true
+    dev: false
 
   /@types/html-minifier-terser/6.1.0:
     resolution: {integrity: sha512-oh/6byDPnL1zeNXFrDXFLyZjkr1MsBG667IM792caf1L2UPOOMf65NFzjUH/ltyfwjAGfs1rsX1eftK0jC/KIg==}
@@ -4650,7 +4652,6 @@ packages:
 
   /@types/prop-types/15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
-    dev: true
 
   /@types/q/1.5.5:
     resolution: {integrity: sha512-L28j2FcJfSZOnL1WBjDYp2vUHCeIFlyYI/53EwD/rKUBQ7MtUUfbQWiyKJGpcnv4/WgrhWsFKrcPstcAt/J0tQ==}
@@ -4676,7 +4677,6 @@ packages:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.3
       csstype: 3.1.2
-    dev: true
 
   /@types/resolve/1.17.1:
     resolution: {integrity: sha512-yy7HuzQhj0dhGpD8RLXSZWEkLsV9ibvxvi6EiJ3bkqLAO1RGo0WbkWQiwpRlSFymTJRz0d3k5LM3kkx8ArDbLw==}
@@ -4690,7 +4690,6 @@ packages:
 
   /@types/scheduler/0.16.3:
     resolution: {integrity: sha512-5cJ8CB4yAx7BH1oMvdU0Jh9lrEXyPkar6F9G/ERswkCuvP4KQZfZkSjcMbAICCpQTN4OuZn8tz0HiKv9TGZgrQ==}
-    dev: true
 
   /@types/semver/6.2.3:
     resolution: {integrity: sha512-KQf+QAMWKMrtBMsB8/24w53tEsxllMj6TuA80TT/5igJalLI/zm0L3oXRbIAl4Ohfc85gyHX/jhMwsVkmhLU4A==}
@@ -4736,13 +4735,13 @@ packages:
       '@types/hoist-non-react-statics': 3.3.1
       '@types/react': 18.2.6
       csstype: 3.1.2
-    dev: true
+    dev: false
 
   /@types/styled-system/5.1.16:
     resolution: {integrity: sha512-+dyGs2n2o6QStsexh87NeaRmXYnKOnEe7iOEkcYOwKwI5a1gFL0+Mt/hZKi+4KD1qDMkLkGb0lpDrffb/vSkDQ==}
     dependencies:
       csstype: 3.1.2
-    dev: true
+    dev: false
 
   /@types/testing-library__jest-dom/5.14.5:
     resolution: {integrity: sha512-SBwbxYoyPIvxHbeHxTZX2Pe/74F/tX2/D3mMvzabdeJ25bBojfW0TyB8BHrbq/9zaaKICJZjLP+8r6AeZMFCuQ==}
@@ -6703,7 +6702,6 @@ packages:
 
   /csstype/3.1.2:
     resolution: {integrity: sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==}
-    dev: true
 
   /csv-generate/3.4.3:
     resolution: {integrity: sha512-w/T+rqR0vwvHqWs/1ZyMDWtHHSJaN06klRqJXBEpDJaM/+dZkso0OKh1VcuuYvK3XM53KysVNq8Ko/epCK8wOw==}

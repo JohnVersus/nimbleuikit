@@ -1,6 +1,8 @@
+// @ts-ignore
+import React from "react";
 import { render, cleanup, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
-import Box from "../../Box";
+import { Box } from "../../Box";
 import "@testing-library/jest-dom";
 
 // unmount and cleanup DOM after the test is finished.
