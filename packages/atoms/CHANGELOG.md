@@ -1,12 +1,12 @@
 # @nimbleuikit/atoms
 
-## 0.1.0
+## 0.0.5
 
 ### Minor Changes
 
 - [`47c40a8`](https://github.com/JohnVersus/nimbleuikit/commit/47c40a8f7c1c9fb5de167cadc7351c6c31062b98) Thanks [@JohnVersus](https://github.com/JohnVersus)! - Fixed the export types packages.
 
-## 0.1.0
+## 0.0.4
 
 ### Minor Changes
 
