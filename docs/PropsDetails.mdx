@@ -1,3 +1,5 @@
+import Table from "./Table";
+
 # Component API
 
 All utility components provides access to various style props. You can use it to quickly style your components using a consistent design system.
@@ -16,100 +18,25 @@ The space utility converts shorthand margin and padding props to margin and padd
 
 Margin and padding props follow a shorthand syntax for specifying direction.
 
-<table>
-  <thead>
-    <tr>
-      <th>Prop</th>
-      <th>CSS Property</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <code>margin</code>, <code>m</code>
-      </td>
-      <td>margin</td>
-    </tr>
-    <tr>
-      <td>
-        <code>marginTop</code>, <code>mt</code>
-      </td>
-      <td>margin-top</td>
-    </tr>
-    <tr>
-      <td>
-        <code>marginRight</code>, <code>mr</code>
-      </td>
-      <td>margin-right</td>
-    </tr>
-    <tr>
-      <td>
-        <code>marginBottom</code>, <code>mb</code>
-      </td>
-      <td>margin-bottom</td>
-    </tr>
-    <tr>
-      <td>
-        <code>marginLeft</code>, <code>ml</code>
-      </td>
-      <td>margin-left</td>
-    </tr>
-    <tr>
-      <td>
-        <code>marginX</code>, <code>mx</code>
-      </td>
-      <td>margin-left and margin-right</td>
-    </tr>
-    <tr>
-      <td>
-        <code>marginY</code>, <code>my</code>
-      </td>
-      <td>margin-top and margin-bottom</td>
-    </tr>
-    <tr>
-      <td>
-        <code>padding</code>, <code>p</code>
-      </td>
-      <td>padding</td>
-    </tr>
-    <tr>
-      <td>
-        <code>paddingTop</code>, <code>pt</code>
-      </td>
-      <td>padding-top</td>
-    </tr>
-    <tr>
-      <td>
-        <code>paddingRight</code>, <code>pr</code>
-      </td>
-      <td>padding-right</td>
-    </tr>
-    <tr>
-      <td>
-        <code>paddingBottom</code>, <code>pb</code>
-      </td>
-      <td>padding-bottom</td>
-    </tr>
-    <tr>
-      <td>
-        <code>paddingLeft</code>, <code>pl</code>
-      </td>
-      <td>padding-left</td>
-    </tr>
-    <tr>
-      <td>
-        <code>paddingX</code>, <code>px</code>
-      </td>
-      <td>padding-left and padding-right</td>
-    </tr>
-    <tr>
-      <td>
-        <code>paddingY</code>, <code>py</code>
-      </td>
-      <td>padding-top and padding-bottom</td>
-    </tr>
-  </tbody>
-</table>
+<Table
+  headers={["Prop", "CSS Property"]}
+  rows={[
+    ["margin, m", "margin"],
+    ["marginTop, mt", "margin-top"],
+    ["marginRight, mr", "margin-right"],
+    ["marginBottom, mb", "margin-bottom"],
+    ["marginLeft, ml", "margin-left"],
+    ["marginX, mx", "margin-left and margin-right"],
+    ["marginY, my", "margin-top and margin-bottom"],
+    ["padding, p", "padding"],
+    ["paddingTop, pt", "padding-top"],
+    ["paddingRight, pr", "padding-right"],
+    ["paddingBottom, pb", "padding-bottom"],
+    ["paddingLeft, pl", "padding-left"],
+    ["paddingX, px", "padding-left and padding-right"],
+    ["paddingY, py", "padding-top and padding-bottom"],
+  ]}
+/>
 
 ```jsx
 // examples (margin prop)
@@ -137,28 +64,13 @@ The color utility includes style props for color and background color.
 - Color names can be used directly from the `theme.colors` object.
 - Raw CSS values can also be passed.
 
-<table>
-  <thead>
-    <tr>
-      <th>Prop</th>
-      <th>CSS Property</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <code>color</code>
-      </td>
-      <td>color</td>
-    </tr>
-    <tr>
-      <td>
-        <code>bg</code>
-      </td>
-      <td>background-color</td>
-    </tr>
-  </tbody>
-</table>
+<Table
+  headers={["Prop", "CSS Property"]}
+  rows={[
+    ["color", "color"],
+    ["bg", "background-color"],
+  ]}
+/>
 
 ```jsx
 // examples (color prop)
@@ -183,88 +95,23 @@ The layout utility includes style props for width, height, display, minWidth, mi
 - String values are passed as raw CSS values.
 - And array values are converted into responsive values.
 
-<table>
-  <thead>
-    <tr>
-      <th>Prop</th>
-      <th>CSS Property</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <code>width</code>
-      </td>
-      <td>width</td>
-    </tr>
-    <tr>
-      <td>
-        <code>height</code>
-      </td>
-      <td>height</td>
-    </tr>
-    <tr>
-      <td>
-        <code>minWidth</code>
-      </td>
-      <td>min-width</td>
-    </tr>
-    <tr>
-      <td>
-        <code>maxWidth</code>
-      </td>
-      <td>max-width</td>
-    </tr>
-    <tr>
-      <td>
-        <code>minHeight</code>
-      </td>
-      <td>min-height</td>
-    </tr>
-    <tr>
-      <td>
-        <code>maxHeight</code>
-      </td>
-      <td>max-height</td>
-    </tr>
-    <tr>
-      <td>
-        <code>display</code>
-      </td>
-      <td>display</td>
-    </tr>
-    <tr>
-      <td>
-        <code>size</code>
-      </td>
-      <td>width and height</td>
-    </tr>
-    <tr>
-      <td>
-        <code>verticalAlign</code>
-      </td>
-      <td>vertical-align</td>
-    </tr>
-    <tr>
-      <td>
-        <code>overflow</code>
-      </td>
-      <td>overflow</td>
-    </tr>
-    <tr>
-      <td>
-        <code>overflowX</code>
-      </td>
-      <td>overflow-x</td>
-    </tr>
-    <tr>
-      <td>
-        <code>overflowY</code>
-      </td>
-      <td>overflow-y</td>
-    </tr>
-  </tbody>
-</table>
+<Table
+  headers={["Prop", "CSS Property"]}
+  rows={[
+    ["width", "width"],
+    ["height", "height"],
+    ["minWidth", "min-width"],
+    ["maxWidth", "max-width"],
+    ["minHeight", "min-height"],
+    ["maxHeight", "max-height"],
+    ["display", "display"],
+    ["size", "width and height"],
+    ["verticalAlign", "vertical-align"],
+    ["overflow", "overflow"],
+    ["overflowX", "overflow-x"],
+    ["overflowY", "overflow-y"],
+  ]}
+/>
 
 ```jsx
 // examples (layout prop)
@@ -287,58 +134,18 @@ Typography utility includes style props for fontFamily, fontSize, fontWeight, li
 - String values are passed as raw CSS values.
 - And array values are converted into responsive values.
 
-<table>
-  <thead>
-    <tr>
-      <th>Prop</th>
-      <th>CSS Property</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <code>fontFamily</code>
-      </td>
-      <td>font-family</td>
-    </tr>
-    <tr>
-      <td>
-        <code>fontSize</code>
-      </td>
-      <td>font-size</td>
-    </tr>
-    <tr>
-      <td>
-        <code>fontWeight</code>
-      </td>
-      <td>font-weight</td>
-    </tr>
-    <tr>
-      <td>
-        <code>lineHeight</code>
-      </td>
-      <td>line-height</td>
-    </tr>
-    <tr>
-      <td>
-        <code>letterSpacing</code>
-      </td>
-      <td>letter-spacing</td>
-    </tr>
-    <tr>
-      <td>
-        <code>textAlign</code>
-      </td>
-      <td>text-align</td>
-    </tr>
-    <tr>
-      <td>
-        <code>fontStyle</code>
-      </td>
-      <td>font-style</td>
-    </tr>
-  </tbody>
-</table>
+<Table
+  headers={["Prop", "CSS Property"]}
+  rows={[
+    ["fontFamily", "font-family"],
+    ["fontSize", "font-size"],
+    ["fontWeight", "font-weight"],
+    ["lineHeight", "line-height"],
+    ["letterSpacing", "letter-spacing"],
+    ["textAlign", "text-align"],
+    ["fontStyle", "font-style"],
+  ]}
+/>
 
 ```jsx
 // examples (typography prop)
@@ -360,94 +167,24 @@ Flexbox utility includes style props for alignItems, alignContent, justifyItems,
 - String values are passed as raw CSS values.
 - And array values are converted into responsive values.
 
-<table>
-  <thead>
-    <tr>
-      <th>Prop</th>
-      <th>CSS Property</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <code>alignItems</code>
-      </td>
-      <td>align-items</td>
-    </tr>
-    <tr>
-      <td>
-        <code>alignContent</code>
-      </td>
-      <td>align-content</td>
-    </tr>
-    <tr>
-      <td>
-        <code>justifyItems</code>
-      </td>
-      <td>justify-items</td>
-    </tr>
-    <tr>
-      <td>
-        <code>justifyContent</code>
-      </td>
-      <td>justify-content</td>
-    </tr>
-    <tr>
-      <td>
-        <code>flexWrap</code>
-      </td>
-      <td>flex-wrap</td>
-    </tr>
-    <tr>
-      <td>
-        <code>flexDirection</code>
-      </td>
-      <td>flex-direction</td>
-    </tr>
-    <tr>
-      <td>
-        <code>flex</code>
-      </td>
-      <td>flex</td>
-    </tr>
-    <tr>
-      <td>
-        <code>flexGrow</code>
-      </td>
-      <td>flex-grow</td>
-    </tr>
-    <tr>
-      <td>
-        <code>flexShrink</code>
-      </td>
-      <td>flex-shrink</td>
-    </tr>
-    <tr>
-      <td>
-        <code>flexBasis</code>
-      </td>
-      <td>flex-basis</td>
-    </tr>
-    <tr>
-      <td>
-        <code>justifySelf</code>
-      </td>
-      <td>justify-self</td>
-    </tr>
-    <tr>
-      <td>
-        <code>alignSelf</code>
-      </td>
-      <td>align-self</td>
-    </tr>
-    <tr>
-      <td>
-        <code>order</code>
-      </td>
-      <td>order</td>
-    </tr>
-  </tbody>
-</table>
+<Table
+  headers={["Prop", "CSS Property"]}
+  rows={[
+    ["alignItems", "align-items"],
+    ["alignContent", "align-content"],
+    ["justifyItems", "justify-items"],
+    ["justifyContent", "justify-content"],
+    ["flexWrap", "flex-wrap"],
+    ["flexDirection", "flex-direction"],
+    ["flex", "flex"],
+    ["flexGrow", "flex-grow"],
+    ["flexShrink", "flex-shrink"],
+    ["flexBasis", "flex-basis"],
+    ["justifySelf", "justify-self"],
+    ["alignSelf", "align-self"],
+    ["order", "order"],
+  ]}
+/>
 
 ```jsx
 // examples (flexbox prop)
@@ -470,88 +207,23 @@ Grid utility includes style props for gridGap, gridColumnGap, gridRowGap, gridCo
 - String values are passed as raw CSS values.
 - And array values are converted into responsive values.
 
-<table>
-  <thead>
-    <tr>
-      <th>Prop</th>
-      <th>CSS Property</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <code>gridGap</code>
-      </td>
-      <td>grid-gap</td>
-    </tr>
-    <tr>
-      <td>
-        <code>gridColumnGap</code>
-      </td>
-      <td>grid-column-gap</td>
-    </tr>
-    <tr>
-      <td>
-        <code>gridRowGap</code>
-      </td>
-      <td>grid-row-gap</td>
-    </tr>
-    <tr>
-      <td>
-        <code>gridColumn</code>
-      </td>
-      <td>grid-column</td>
-    </tr>
-    <tr>
-      <td>
-        <code>gridRow</code>
-      </td>
-      <td>grid-row</td>
-    </tr>
-    <tr>
-      <td>
-        <code>gridAutoFlow</code>
-      </td>
-      <td>grid-auto-flow</td>
-    </tr>
-    <tr>
-      <td>
-        <code>gridAutoColumns</code>
-      </td>
-      <td>grid-auto-columns</td>
-    </tr>
-    <tr>
-      <td>
-        <code>gridAutoRows</code>
-      </td>
-      <td>grid-auto-rows</td>
-    </tr>
-    <tr>
-      <td>
-        <code>gridTemplateColumns</code>
-      </td>
-      <td>grid-template-columns</td>
-    </tr>
-    <tr>
-      <td>
-        <code>gridTemplateRows</code>
-      </td>
-      <td>grid-template-rows</td>
-    </tr>
-    <tr>
-      <td>
-        <code>gridTemplateAreas</code>
-      </td>
-      <td>grid-template-areas</td>
-    </tr>
-    <tr>
-      <td>
-        <code>gridArea</code>
-      </td>
-      <td>grid-area</td>
-    </tr>
-  </tbody>
-</table>
+<Table
+  headers={["Prop", "CSS Property"]}
+  rows={[
+    ["gridGap", "grid-gap"],
+    ["gridColumnGap", "grid-column-gap"],
+    ["gridRowGap", "grid-row-gap"],
+    ["gridColumn", "grid-column"],
+    ["gridRow", "grid-row"],
+    ["gridAutoFlow", "grid-auto-flow"],
+    ["gridAutoColumns", "grid-auto-columns"],
+    ["gridAutoRows", "grid-auto-rows"],
+    ["gridTemplateColumns", "grid-template-columns"],
+    ["gridTemplateRows", "grid-template-rows"],
+    ["gridTemplateAreas", "grid-template-areas"],
+    ["gridArea", "grid-area"],
+  ]}
+/>
 
 ```jsx
 // examples (grid prop)
@@ -571,52 +243,17 @@ Background utility includes style props for background, backgroundColor, backgro
 - String values are passed as raw CSS values.
 - And array values are converted into responsive values.
 
-<table>
-  <thead>
-    <tr>
-      <th>Prop</th>
-      <th>CSS Property</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <code>background</code>
-      </td>
-      <td>background</td>
-    </tr>
-    <tr>
-      <td>
-        <code>backgroundColor</code>
-      </td>
-      <td>background-color</td>
-    </tr>
-    <tr>
-      <td>
-        <code>backgroundImage</code>
-      </td>
-      <td>background-image</td>
-    </tr>
-    <tr>
-      <td>
-        <code>backgroundSize</code>
-      </td>
-      <td>background-size</td>
-    </tr>
-    <tr>
-      <td>
-        <code>backgroundPosition</code>
-      </td>
-      <td>background-position</td>
-    </tr>
-    <tr>
-      <td>
-        <code>backgroundRepeat</code>
-      </td>
-      <td>background-repeat</td>
-    </tr>
-  </tbody>
-</table>
+<Table
+  headers={["Prop", "CSS Property"]}
+  rows={[
+    ["background", "background"],
+    ["backgroundColor", "background-color"],
+    ["backgroundImage", "background-image"],
+    ["backgroundSize", "background-size"],
+    ["backgroundPosition", "background-position"],
+    ["backgroundRepeat", "background-repeat"],
+  ]}
+/>
 
 ```jsx
 // examples (background prop)
@@ -636,88 +273,23 @@ Border utility includes style props for border, borderWidth, borderStyle, border
 - String values are passed as raw CSS values.
 - And array values are converted into responsive values.
 
-<table>
-  <thead>
-    <tr>
-      <th>Prop</th>
-      <th>CSS Property</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <code>border</code>
-      </td>
-      <td>border</td>
-    </tr>
-    <tr>
-      <td>
-        <code>borderWidth</code>
-      </td>
-      <td>border-width</td>
-    </tr>
-    <tr>
-      <td>
-        <code>borderStyle</code>
-      </td>
-      <td>border-style</td>
-    </tr>
-    <tr>
-      <td>
-        <code>borderColor</code>
-      </td>
-      <td>border-color</td>
-    </tr>
-    <tr>
-      <td>
-        <code>borderRadius</code>
-      </td>
-      <td>border-radius</td>
-    </tr>
-    <tr>
-      <td>
-        <code>borderTop</code>
-      </td>
-      <td>border-top</td>
-    </tr>
-    <tr>
-      <td>
-        <code>borderTopRight</code>
-      </td>
-      <td>border-top-right</td>
-    </tr>
-    <tr>
-      <td>
-        <code>borderBottom</code>
-      </td>
-      <td>border-bottom</td>
-    </tr>
-    <tr>
-      <td>
-        <code>borderBottomLeft</code>
-      </td>
-      <td>border-bottom-left</td>
-    </tr>
-    <tr>
-      <td>
-        <code>borderLeft</code>
-      </td>
-      <td>border-left</td>
-    </tr>
-    <tr>
-      <td>
-        <code>borderX</code>
-      </td>
-      <td>border-left and border-right</td>
-    </tr>
-    <tr>
-      <td>
-        <code>borderY</code>
-      </td>
-      <td>border-top and border-bottom</td>
-    </tr>
-  </tbody>
-</table>
+<Table
+  headers={["Prop", "CSS Property"]}
+  rows={[
+    ["border", "border"],
+    ["borderWidth", "border-width"],
+    ["borderStyle", "border-style"],
+    ["borderColor", "border-color"],
+    ["borderRadius", "border-radius"],
+    ["borderTop", "border-top"],
+    ["borderTopRight", "border-top-right"],
+    ["borderBottom", "border-bottom"],
+    ["borderBottomLeft", "border-bottom-left"],
+    ["borderLeft", "border-left"],
+    ["borderX", "border-left and border-right"],
+    ["borderY", "border-top and border-bottom"],
+  ]}
+/>
 
 ```jsx
 // examples (border prop)
@@ -739,40 +311,17 @@ Position utility includes style props for position, zIndex, top, right, bottom, 
 - String values are passed as raw CSS values.
 - And array values are converted into responsive values.
 
-<table>
-  <thead>
-    <tr>
-      <th>Prop</th>
-      <th>CSS Property</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>position</td>
-      <td>position</td>
-    </tr>
-    <tr>
-      <td>zIndex</td>
-      <td>z-index</td>
-    </tr>
-    <tr>
-      <td>top</td>
-      <td>top</td>
-    </tr>
-    <tr>
-      <td>right</td>
-      <td>right</td>
-    </tr>
-    <tr>
-      <td>bottom</td>
-      <td>bottom</td>
-    </tr>
-    <tr>
-      <td>left</td>
-      <td>left</td>
-    </tr>
-  </tbody>
-</table>
+<Table
+  headers={["Prop", "CSS Property"]}
+  rows={[
+    ["position", "position"],
+    ["zIndex", "z-index"],
+    ["top", "top"],
+    ["right", "right"],
+    ["bottom", "bottom"],
+    ["left", "left"],
+  ]}
+/>
 
 ```jsx
 // examples (position prop)
@@ -795,28 +344,13 @@ Shadow utility includes style props for boxShadow and textShadow.
 - String values are passed as raw CSS values.
 - And array values are converted into responsive values.
 
-<table>
-  <thead>
-    <tr>
-      <th>Prop</th>
-      <th>CSS Property</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <code>boxShadow</code>
-      </td>
-      <td>box-shadow</td>
-    </tr>
-    <tr>
-      <td>
-        <code>textShadow</code>
-      </td>
-      <td>text-shadow</td>
-    </tr>
-  </tbody>
-</table>
+<Table
+  headers={["Prop", "CSS Property"]}
+  rows={[
+    ["boxShadow", "box-shadow"],
+    ["textShadow", "text-shadow"],
+  ]}
+/>
 
 ```jsx
 // examples (shadow prop)

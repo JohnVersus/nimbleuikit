@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import Box, { BoxProps } from "../../Box";
+import { Box, BoxProps } from "./";
 
 const meta: Meta<BoxProps> = {
   title: "Atoms/Box",
@@ -15,7 +15,7 @@ export default meta;
 
 /**
  * Simple Box component.
- * This component renders a simple box with text.
+ * This component renders a simple box with text. Refer to [Props Details](?path=/docs/propsdetails--documentation) for details on the available props.
  */
 export const SimpleBox: StoryObj<BoxProps> = {
   args: {
