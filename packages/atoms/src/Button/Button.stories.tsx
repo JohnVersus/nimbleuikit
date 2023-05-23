@@ -1,6 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Button, ButtonProps } from "./";
 
+/**
+ * Refer to [Props Details](?path=/docs/propsdetails--documentation) for details on the available props.
+ */
 const meta: Meta<ButtonProps> = {
   title: "Atoms/Button",
   component: Button,
@@ -14,7 +17,7 @@ const meta: Meta<ButtonProps> = {
 export default meta;
 
 /**
- * A default button with no additional styling. Refer to [Props Details](?path=/docs/propsdetails--documentation) for details on the available props.
+ * A default button with no additional styling.
  */
 export const DefaultButton: StoryObj<ButtonProps> = {
   args: {
