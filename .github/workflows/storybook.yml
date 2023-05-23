@@ -1,8 +1,10 @@
 on:
   push:
+    branches:
+      - main
     paths:
       - "docs/*.mdx"
-      - "packages/**/*.stories.@(js|jsx|ts|tsx)"
+      - "**.stories.@(js|jsx|ts|tsx)"
       # - ".github/workflows/storybook.yml"
 
 name: Publish storybook
