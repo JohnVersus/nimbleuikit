@@ -76,3 +76,17 @@ export const BoldText: StoryObj<TextProps> = {
 };
 
 BoldText.storyName = "Bold Text";
+
+/**
+ * A text component with shadow.
+ */
+export const ShadowText: StoryObj<TextProps> = {
+  args: {
+    p: 2,
+    color: "black",
+    children: "Bold Text",
+    textShadow: "#FC0 1px 0 10px",
+  },
+};
+
+ShadowText.storyName = "Shadow Text";

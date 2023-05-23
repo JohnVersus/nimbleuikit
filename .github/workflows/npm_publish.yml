@@ -1,9 +1,11 @@
-name: Publish Packages
+name: Test or Publish Packages
 
 on:
   push:
     branches:
       - main
+    paths:
+      - "packages/**/*.@(js|jsx|ts|tsx)"
 
 env:
   CI: true
@@ -44,7 +46,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
 
-      - name: Test
+      - name: Run Test
         run: pnpm test
 
       - name: Build Atoms
