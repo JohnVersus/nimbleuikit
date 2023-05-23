@@ -2,7 +2,7 @@ on:
   push:
     paths:
       - "docs/*.mdx"
-      - "**/*.stories.@(js|jsx|ts|tsx)"
+      - "packages/**/*.stories.@(js|jsx|ts|tsx)"
       # - ".github/workflows/storybook.yml"
 
 name: Publish storybook
