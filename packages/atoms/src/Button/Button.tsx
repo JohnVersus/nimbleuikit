@@ -1,4 +1,4 @@
-import styled, { css as styledCss } from "styled-components";
+import styled from "styled-components";
 import { commonSystemProps } from "../system";
 
 import { ButtonProps } from ".";
@@ -11,8 +11,7 @@ const Button = styled.button<ButtonProps>(
       cursor: "not-allowed",
     },
   },
-  ...commonSystemProps,
-  (props) => props.css && styledCss(props.css)
+  ...commonSystemProps
 );
 
 export default Button;

@@ -84,7 +84,7 @@ export const ShadowText: StoryObj<TextProps> = {
   args: {
     p: 2,
     color: "black",
-    children: "Bold Text",
+    children: "Shadow Text",
     textShadow: "#FC0 1px 0 10px",
   },
 };
