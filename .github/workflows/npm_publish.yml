@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - "packages/**.@(js|jsx|ts|tsx)"
+      - "packages/**"
 
 env:
   CI: true

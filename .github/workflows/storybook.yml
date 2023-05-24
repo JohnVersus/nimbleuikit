@@ -4,7 +4,7 @@ on:
       - main
     paths:
       - "docs/*.mdx"
-      - "**.stories.@(js|jsx|ts|tsx)"
+      - "packages/**"
       # - ".github/workflows/storybook.yml"
 
 name: Publish storybook

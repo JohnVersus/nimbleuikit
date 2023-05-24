@@ -64,7 +64,7 @@ export const LargeText: StoryObj<TextProps> = {
 LargeText.storyName = "Large Text";
 
 /**
- * A text component with bold text font.
+ * A text component with bold font text.
  */
 export const BoldText: StoryObj<TextProps> = {
   args: {
