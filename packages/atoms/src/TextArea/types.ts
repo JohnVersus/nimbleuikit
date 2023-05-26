@@ -1,8 +1,6 @@
+import { TextareaHTMLAttributes } from "react";
 import { CommonStyleProps } from "../types";
 
 export interface TextAreaProps
   extends CommonStyleProps,
-    Omit<
-      React.TextareaHTMLAttributes<HTMLTextAreaElement>,
-      "children" | "color"
-    > {}
+    Omit<TextareaHTMLAttributes<HTMLTextAreaElement>, "children" | "color"> {}
