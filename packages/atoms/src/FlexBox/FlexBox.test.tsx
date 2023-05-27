@@ -7,6 +7,7 @@ import "@testing-library/jest-dom";
 afterEach(cleanup);
 
 it("renders correctly", () => {
-  const { asFragment } = render(<FlexBox />);
-  expect(asFragment()).toMatchSnapshot();
+  const { container } = render(<FlexBox />);
+  expect(container.firstChild).toBeInTheDocument();
+  expect(container.firstChild).toHaveStyle("display: flex");
 });

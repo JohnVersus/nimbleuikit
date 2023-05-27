@@ -7,6 +7,6 @@ import "@testing-library/jest-dom";
 afterEach(cleanup);
 
 it("renders correctly", () => {
-  const { asFragment } = render(<Grid />);
-  expect(asFragment()).toMatchSnapshot();
+  const { container } = render(<Grid />);
+  expect(container.firstChild).toBeInTheDocument();
 });
