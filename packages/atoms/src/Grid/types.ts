@@ -1,5 +1,5 @@
 import { BoxProps } from "../Box/types";
 
-export interface FlexBoxProps extends BoxProps {
+export interface GridProps extends BoxProps {
   gap?: string | number;
 }

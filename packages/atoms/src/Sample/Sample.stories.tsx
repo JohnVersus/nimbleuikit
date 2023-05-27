@@ -5,7 +5,7 @@ import { Sample, SampleProps } from ".";
  * Refer to [Props Details](?path=/docs/propsdetails--documentation) for details on the available props.
  */
 const meta: Meta<SampleProps> = {
-  title: "Atoms/Sample",
+  title: "Sample/Sample for devs",
   component: Sample,
   tags: ["autodocs"], // for documentation
 };

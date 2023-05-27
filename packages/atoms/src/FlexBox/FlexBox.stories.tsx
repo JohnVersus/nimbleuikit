@@ -20,14 +20,15 @@ export default meta;
 
 const Template: StoryObj<FlexBoxProps> = {
   args: {
+    gap: "2rem",
     children: [
-      <Box key="box1" bg="lightgray" p={3} m={2}>
+      <Box key="box1" bg="lightgray" p={3}>
         Box 1
       </Box>,
-      <Box key="box2" bg="lightgray" p={3} m={2}>
+      <Box key="box2" bg="lightgray" p={3}>
         Box 2
       </Box>,
-      <Box key="box3" bg="lightgray" p={3} m={2}>
+      <Box key="box3" bg="lightgray" p={3}>
         Box 3
       </Box>,
     ],
