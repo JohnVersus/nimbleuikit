@@ -1,5 +1,11 @@
 # @nimbleuikit/atoms
 
+## 0.1.0
+
+### Minor Changes
+
+- [`13c8ba6`](https://github.com/JohnVersus/nimbleuikit/commit/13c8ba63878f1474a6b951f678f7951d0dc349a9) Thanks [@JohnVersus](https://github.com/JohnVersus)! - New general use components like Text, Input, Lable, Form, Button, Grid and Flexbox added.
+
 ## 0.0.5
 
 ### Minor Changes
