@@ -1,5 +1,15 @@
 # @nimbleuikit/atoms
 
+## 0.2.0
+
+### Minor Changes
+
+- [`66d3771`](https://github.com/JohnVersus/nimbleuikit/commit/66d37718f30718ee1f5b2a20aad1135ac952d981) Thanks [@JohnVersus](https://github.com/JohnVersus)! - Added Dialog component and more also more tests for other components.
+
+### Patch Changes
+
+- [`3c1a3a5`](https://github.com/JohnVersus/nimbleuikit/commit/3c1a3a53bc9787ecf2479cbabf29136d2f8ea513) Thanks [@JohnVersus](https://github.com/JohnVersus)! - Version fix and New general use components like Text, Input, Lable, Form, Button, Grid and Flexbox added
+
 ## 0.1.0
 
 ### Minor Changes
