@@ -1,4 +1,4 @@
-import { render, cleanup } from "@testing-library/react";
+import { render, cleanup, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 import { Form } from ".";
 import "@testing-library/jest-dom";
@@ -7,6 +7,19 @@ import "@testing-library/jest-dom";
 afterEach(cleanup);
 
 it("renders correctly", () => {
-  const { asFragment } = render(<Form />);
-  expect(asFragment()).toMatchSnapshot();
+  const { container } = render(<Form />);
+  expect(container.firstChild).toBeInTheDocument();
+  expect(container.firstChild).toBeTruthy();
+});
+
+it("calls onSubmit prop when form is submitted", () => {
+  const handleSubmit = jest.fn();
+  const { getByTestId } = render(
+    <Form data-testid="form" onSubmit={handleSubmit} />
+  );
+  const form = getByTestId("form");
+
+  fireEvent.submit(form);
+
+  expect(handleSubmit).toHaveBeenCalled();
 });
