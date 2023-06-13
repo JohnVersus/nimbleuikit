@@ -12,6 +12,6 @@ import { TextProps } from "./";
  * ```
  */
 
-const Text = styled.span<TextProps>({}, ...commonSystemProps);
+const Text = styled.div<TextProps>({}, ...commonSystemProps);
 
 export default Text;
