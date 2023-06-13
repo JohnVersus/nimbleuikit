@@ -1,6 +1,6 @@
 import React from "react";
 import { ContentLoaderProps } from "../types";
-import "./style.css";
+import "./styles.css";
 
 const TextLoader: React.FC<ContentLoaderProps> = ({
   width = 400,

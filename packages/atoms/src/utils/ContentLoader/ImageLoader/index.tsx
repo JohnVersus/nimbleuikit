@@ -1,6 +1,6 @@
 import React from "react";
 import { ContentLoaderProps } from "../types";
-import "./style.css";
+import "./styles.css";
 
 const ImageLoader: React.FC<ContentLoaderProps> = ({
   width = 200,
