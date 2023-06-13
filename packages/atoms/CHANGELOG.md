@@ -1,5 +1,26 @@
 # @nimbleuikit/atoms
 
+## 0.3.0
+
+### Minor Changes
+
+- [`aaa332f`](https://github.com/JohnVersus/nimbleuikit/commit/aaa332f097513095fba76c82c2975290f1aa25ad) Thanks [@JohnVersus](https://github.com/JohnVersus)! - Added new components
+
+  - Tooltip
+  - IntlText
+
+  New Utils Components
+
+  - Loader
+  - ContentLoader
+  - Header
+  - Body
+  - SEO
+
+### Patch Changes
+
+- [`2da04a7`](https://github.com/JohnVersus/nimbleuikit/commit/2da04a707a24380b87a9acb9fd0f574f55ceb50e) Thanks [@JohnVersus](https://github.com/JohnVersus)! - Fix ContentLoader imports
+
 ## 0.2.0
 
 ### Minor Changes
