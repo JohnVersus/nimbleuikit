@@ -1,0 +1,86 @@
+# Responsive Styles
+
+Responsive layouts often require adjusting styles along a singular dimension like font-size, margin, padding, and width. Instead of manually managing media queries and adding nested style objects, Styled System offers a convenient shorthand syntax for adding responsive styles using a mobile-first approach. This syntax allows managing responsive typography and layouts more efficiently.
+
+All style utilities in Styled System add props that accept arrays as values for mobile-first responsive styles.
+
+```jsx
+import { Box } from '@nimbleuikit/atoms';
+
+<Box
+  width={[
+    1, // 100% below the smallest breakpoint
+    1 / 2, // 50% from the next breakpoint and up
+    1 / 4, // 25% from the next breakpoint and up
+  ]}
+/>
+
+// responsive font size
+
+<Box fontSize={[1, 2, 3, 4]} />
+
+// responsive margin
+
+<Box m={[1, 2, 3, 4]} />
+
+// responsive padding
+
+<Box p={[1, 2, 3, 4]} />
+```
+
+## What it does
+
+The shorthand is an alternative to manually writing media queries.
+
+Given the following:
+
+```jsx
+<Box width={[1, 1 / 2, 1 / 4]} />
+```
+
+Styled System, with a CSS-in-JS library, will generate something like the following CSS:
+
+```css
+.Box-hash {
+  width: 100%;
+}
+
+@media screen and (min-width: 40em) {
+  .Box-hash {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 52em) {
+  .Box-hash {
+    width: 25%;
+  }
+}
+```
+
+## Using objects
+
+Alternatively, you can define breakpoints with aliases and use plain objects as values. Any undefined alias key will define the base, non-responsive value.
+
+```jsx
+// theme.js
+const breakpoints = ["40em", "52em", "64em", "80em"];
+
+// aliases
+breakpoints.sm = breakpoints[0];
+breakpoints.md = breakpoints[1];
+breakpoints.lg = breakpoints[2];
+breakpoints.xl = breakpoints[3];
+
+export default {
+  breakpoints,
+};
+```
+
+Then, use these aliases in your components:
+
+```jsx
+<Box width={{ _: 1, sm: 1, md: 1 / 2, lg: 1 / 4 }} />
+```
+
+For more detailed information on the responsive styling, please refer to the [Styled System Responsive Styles](https://styled-system.com/responsive-styles/).

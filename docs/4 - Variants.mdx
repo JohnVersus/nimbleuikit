@@ -1,0 +1,66 @@
+# Customizing Components with Variants
+
+The `@nimbleuikit/atoms` library provides a convenient way to customize components using the `variant` function from `styled-system`. The `variant` function can be used to apply complex styles to a component based on a single prop.
+
+## Usage
+
+First, you need to import the `variant` function and the component you want to customize:
+
+```jsx
+import { Button } from "@nimbleuikit/atoms";
+import { variant } from "@nimbleuikit/atoms/utils";
+```
+
+Next, you can define your custom variants using the `variant` function:
+
+```jsx
+import { styled } from "@nimbleuikit/atoms/utils";
+const CustomButton = styled(Button)(
+  variant({
+    variants: {
+      primary: {
+        color: "black",
+        bg: "white",
+      },
+      secondary: {
+        color: "white",
+        bg: "black",
+      },
+    },
+  })
+);
+```
+
+The `CustomButton` component can now use the `variant` prop to switch between the primary and secondary styles:
+
+```jsx
+<CustomButton variant='primary'>Primary</CustomButton>
+<CustomButton variant='secondary'>Secondary</CustomButton>
+```
+
+Please note that when using CSS properties in a variant, you should avoid mixing these styles with conflicting Styled System props. For example, if your variant includes the `color` property, avoid using the `color` React prop in your components.
+
+## Custom Prop Name
+
+If you'd like to use a custom prop name other than `variant`, use the `prop` option:
+
+```jsx
+const CustomButton = styled(Button)(
+  variant({
+    prop: "size",
+    variants: {
+      big: {
+        fontSize: 4,
+        lineHeight: "heading",
+      },
+      small: {
+        fontSize: 1,
+        lineHeight: "body",
+      },
+    },
+  })
+);
+// Usage: <CustomButton size='big' />
+```
+
+This document provides a basic introduction to customizing components with variants. For more advanced usage, refer to the [styled-system documentation](https://styled-system.com/variants).

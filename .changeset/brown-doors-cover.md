@@ -2,4 +2,4 @@
 "@nimbleuikit/atoms": minor
 ---
 
-Added as new utils component GlobalStyle and added a few package docs.
+Added a new utils component GlobalStyle and added a few package docs.

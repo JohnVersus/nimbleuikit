@@ -1,8 +1,8 @@
 // Component exports
 export * from "./Box";
 export * from "./Button";
-export * from "./FlexBox";
 export * from "./Dialog";
+export * from "./FlexBox";
 export * from "./Form";
 export * from "./Grid";
 export * from "./Input";
