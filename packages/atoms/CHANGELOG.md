@@ -1,5 +1,11 @@
 # @nimbleuikit/atoms
 
+## 0.4.0
+
+### Minor Changes
+
+- [`81ece4f`](https://github.com/JohnVersus/nimbleuikit/commit/81ece4fdc408f6888b32d43050f7800e82e99a18) Thanks [@JohnVersus](https://github.com/JohnVersus)! - Added a new utils component GlobalStyle and added a few package docs.
+
 ## 0.3.0
 
 ### Minor Changes
