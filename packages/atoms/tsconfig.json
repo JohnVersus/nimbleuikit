@@ -28,5 +28,5 @@
     "declaration": true
   },
   "include": ["src"],
-  "exclude": ["src/stories", "src/tests", "node_modules"]
+  "exclude": ["src/**/*.stories.tsx", "src/**/*.test.tsx", "node_modules"]
 }
