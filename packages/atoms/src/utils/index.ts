@@ -3,7 +3,6 @@ import styledOriginal from "styled-components";
 // Utils exports
 export * from "./Body";
 export * from "./ContentLoader";
-export * from "./GlobalStyle";
 export * from "./Header";
 export * from "./Loader";
 export * from "./SEO";
