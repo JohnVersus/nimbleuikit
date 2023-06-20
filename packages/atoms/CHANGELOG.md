@@ -1,5 +1,13 @@
 # @nimbleuikit/atoms
 
+## 0.4.1
+
+### Patch Changes
+
+- [`4b1833b`](https://github.com/JohnVersus/nimbleuikit/commit/4b1833b599eb12b446e498d7a26b791203685b25) Thanks [@JohnVersus](https://github.com/JohnVersus)! - Removed utils with jsx runtime, fixed missing css files.
+
+- [`fdb6092`](https://github.com/JohnVersus/nimbleuikit/commit/fdb609267ad31a240b70c49d659d13c786dcffa2) Thanks [@JohnVersus](https://github.com/JohnVersus)! - Fixed export paths
+
 ## 0.4.0
 
 ### Minor Changes
