@@ -2,6 +2,7 @@
   "name": "@nimbleuikit/atoms",
   "version": "0.4.1",
   "description": "",
+  "homepage": "https://github.com/JohnVersus/nimbleuikit",
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "files": [
@@ -11,7 +12,10 @@
     "build": "tsc && node scripts/copyCSS.js",
     "ci:publish": "pnpm run build && pnpm publish --access public"
   },
-  "keywords": [],
+  "keywords": [
+    "Ui Kit",
+    "Light weight"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
