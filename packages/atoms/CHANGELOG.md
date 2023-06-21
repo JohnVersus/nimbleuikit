@@ -1,5 +1,11 @@
 # @nimbleuikit/atoms
 
+## 0.4.2
+
+### Patch Changes
+
+- [`286d611`](https://github.com/JohnVersus/nimbleuikit/commit/286d611087affb45d68894f0f1eeca6bf0258a59) Thanks [@JohnVersus](https://github.com/JohnVersus)! - Fix uploaded files
+
 ## 0.4.1
 
 ### Patch Changes
