@@ -1,5 +1,11 @@
 # @nimbleuikit/atoms
 
+## 0.4.3
+
+### Patch Changes
+
+- [`1822d32`](https://github.com/JohnVersus/nimbleuikit/commit/1822d3249956c84365e01e8c8aedd535547390f5) Thanks [@JohnVersus](https://github.com/JohnVersus)! - Adding a utils subfolder export
+
 ## 0.4.2
 
 ### Patch Changes
