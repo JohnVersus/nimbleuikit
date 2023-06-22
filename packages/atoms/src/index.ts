@@ -14,6 +14,3 @@ export * from "./Tooltip";
 
 // Hook exports
 export * from "./hooks";
-
-// utils exports
-export * from "./utils";

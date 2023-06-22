@@ -1,8 +1,7 @@
-import React from "react";
 import { LoaderProps } from "../types";
 import "./styles.css";
 
-const DoubleBounce: React.FC<LoaderProps> = ({ size, color }) => (
+const DoubleBounce = ({ size, color }: LoaderProps) => (
   <div className="double-bounce-loader">
     <div
       className="bounce1"

@@ -8,6 +8,9 @@
   "files": [
     "build"
   ],
+  "exports": {
+    "./utils": "./src/utils/"
+  },
   "scripts": {
     "build": "tsc && node scripts/copyCSS.js",
     "ci:publish": "pnpm run build && pnpm publish --access public"

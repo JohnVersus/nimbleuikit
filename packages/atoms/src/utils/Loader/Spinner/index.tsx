@@ -1,8 +1,7 @@
-import React from "react";
 import { LoaderProps } from "../types";
 import "./styles.css";
 
-const Spinner: React.FC<LoaderProps> = ({ size, color }) => (
+const Spinner = ({ size, color }: LoaderProps) => (
   <div
     className="spinner-loader"
     style={{

@@ -1,12 +1,8 @@
-import React from "react";
 import { ContentLoaderProps } from "./types";
 import ImageLoader from "./ImageLoader";
 import TextLoader from "./TextLoader";
 
-const ContentLoader: React.FC<ContentLoaderProps> = ({
-  type = "image",
-  ...props
-}) => {
+const ContentLoader = ({ type = "image", ...props }: ContentLoaderProps) => {
   switch (type) {
     case "text":
       return <TextLoader {...props} />;

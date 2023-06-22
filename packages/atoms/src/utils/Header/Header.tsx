@@ -1,7 +1,6 @@
-import React from "react";
 import { HeaderProps } from "./types";
 
-const Header: React.FC<HeaderProps> = ({ children }) => {
+const Header = ({ children }: HeaderProps) => {
   return <header>{children}</header>;
 };
 

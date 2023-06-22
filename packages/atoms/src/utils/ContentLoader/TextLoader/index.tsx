@@ -1,14 +1,13 @@
-import React from "react";
 import { ContentLoaderProps } from "../types";
 import "./styles.css";
 
-const TextLoader: React.FC<ContentLoaderProps> = ({
+const TextLoader = ({
   width = 400,
   height = 15,
   backgroundColor = "#f3f3f3",
   foregroundColor = "#ecebeb",
   quantity = 4,
-}) => {
+}: ContentLoaderProps) => {
   return (
     <div className="text-loader-container">
       {[...Array(quantity)].map((_, i) => (

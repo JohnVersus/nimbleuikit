@@ -1,7 +1,6 @@
-import React from "react";
 import { BodyProps } from "./types";
 
-const Body: React.FC<BodyProps> = ({ children }) => {
+const Body = ({ children }: BodyProps) => {
   return <main>{children}</main>;
 };
 

@@ -1,13 +1,12 @@
-import React from "react";
 import { LoaderProps } from "./types";
 import Spinner from "./Spinner";
 import DoubleBounce from "./DoubleBounce";
 
-const Loader: React.FC<LoaderProps> = ({
+const Loader = ({
   size = 25,
   color = "#000",
   type = "spinner",
-}) => {
+}: LoaderProps) => {
   switch (type) {
     case "double-bounce":
       return <DoubleBounce size={size} color={color} />;

@@ -1,7 +1,6 @@
-import React from "react";
 import { SEOProps } from "./types";
 
-const SEO: React.FC<SEOProps> = ({
+const SEO = ({
   title,
   description,
   image,
@@ -9,7 +8,7 @@ const SEO: React.FC<SEOProps> = ({
   keywords,
   lang = "en",
   type = "website",
-}) => {
+}: SEOProps) => {
   return (
     <>
       <title>{title}</title>
