@@ -1,5 +1,11 @@
 # @nimbleuikit/atoms
 
+## 0.4.4
+
+### Patch Changes
+
+- [`5c68322`](https://github.com/JohnVersus/nimbleuikit/commit/5c683224c0553dda02bb67edd4c13882c5eeb71a) Thanks [@JohnVersus](https://github.com/JohnVersus)! - Fixed exports and tsc compile
+
 ## 0.4.3
 
 ### Patch Changes
