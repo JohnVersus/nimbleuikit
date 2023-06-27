@@ -1,5 +1,11 @@
 # @nimbleuikit/atoms
 
+## 0.4.5
+
+### Patch Changes
+
+- [`461c4a2`](https://github.com/JohnVersus/nimbleuikit/commit/461c4a237aedbadbbb54894b8e5c4de9ce60cdeb) Thanks [@JohnVersus](https://github.com/JohnVersus)! - Cleaning package.json exports
+
 ## 0.4.4
 
 ### Patch Changes
