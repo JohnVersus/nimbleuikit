@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { commonSystemProps } from "../system";
+import { commonSystemProps } from "../../system";
 import { SampleProps } from "./types";
 
 /**
