@@ -4,16 +4,18 @@
   "description": "",
   "homepage": "https://github.com/JohnVersus/nimbleuikit",
   "files": [
-    "build"
+    "*.js",
+    "*.d.ts*"
   ],
+  "types": "./index.d.ts",
   "exports": {
     ".": {
-      "default": "./build/index.js",
-      "types": "./build/index.d.ts"
+      "import": "./index.js",
+      "types": "./index.d.ts"
     },
     "./utils": {
-      "default": "./build/utils/index.js",
-      "types": "./build/utils/index.d.ts"
+      "import": "./utils/index.js",
+      "types": "./utils/index.d.ts"
     }
   },
   "scripts": {

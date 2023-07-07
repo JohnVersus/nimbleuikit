@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
-import { Box } from "..";
+import { Box } from "../Box";
 import { TooltipProps } from "./types";
 
 const Tooltip: React.FC<TooltipProps> = ({

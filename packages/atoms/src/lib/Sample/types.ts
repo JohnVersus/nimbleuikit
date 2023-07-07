@@ -1,5 +1,5 @@
 import { HTMLAttributes } from "react";
-import { CommonStyleProps } from "../types";
+import { CommonStyleProps } from "../../types";
 
 /**
  * Props for the Sample component.

@@ -15,4 +15,4 @@ function copyCSS(dir, outDir) {
   });
 }
 
-copyCSS(path.join(__dirname, "..", "src"), path.join(__dirname, "..", "build"));
+copyCSS(path.join(__dirname, "..", "src"), path.join(__dirname, "..", "."));

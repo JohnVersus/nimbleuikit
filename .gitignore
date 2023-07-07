@@ -37,3 +37,9 @@ yarn-error.log*
 
 # storybook 
 storybook-static
+
+# packages 
+packages/atoms/lib
+packages/atoms/utils
+packages/atoms/*.js
+packages/atoms/*.d.ts*
