@@ -1,3 +1,4 @@
+import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { Box, Button, FlexBox, Text } from "../"; // assuming these exist
 import { Dialog, DialogProps } from "./";
