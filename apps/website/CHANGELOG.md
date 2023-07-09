@@ -1,5 +1,12 @@
 # website
 
+## 0.1.2
+
+### Patch Changes
+
+- Updated dependencies [[`3a69c19`](https://github.com/JohnVersus/nimbleuikit/commit/3a69c192d17451a93c171414eddb9a7fb5081dcd)]:
+  - @nimbleuikit/atoms@0.5.1
+
 ## 0.1.1
 
 ### Patch Changes
