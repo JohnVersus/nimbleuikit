@@ -5,7 +5,9 @@
   "homepage": "https://github.com/JohnVersus/nimbleuikit",
   "files": [
     "*.js",
-    "*.d.ts*"
+    "*.d.ts*",
+    "lib",
+    "utils"
   ],
   "types": "./index.d.ts",
   "exports": {
