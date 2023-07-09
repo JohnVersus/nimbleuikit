@@ -1,5 +1,11 @@
 # @nimbleuikit/atoms
 
+## 0.5.0
+
+### Minor Changes
+
+- [`bda20fc`](https://github.com/JohnVersus/nimbleuikit/commit/bda20fc4b830f203f01219318e68cc263be39416) Thanks [@JohnVersus](https://github.com/JohnVersus)! - Fix import paths of utils.🧑‍🔧
+
 ## 0.4.5
 
 ### Patch Changes
