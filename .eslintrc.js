@@ -12,7 +12,10 @@ module.exports = {
     "no-unused-vars": "error",
     "no-undef": "error",
     "@typescript-eslint/no-explicit-any": "error",
-    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      { varsIgnorePattern: "^React$" },
+    ],
     "@typescript-eslint/explicit-function-return-type": "error",
     "@typescript-eslint/no-implicit-any-catch": "error",
     "@typescript-eslint/consistent-type-imports": [

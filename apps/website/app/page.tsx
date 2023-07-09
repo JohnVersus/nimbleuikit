@@ -1,5 +1,6 @@
-import { ContentLoader } from "@nimbleuikit/atoms/build/utils";
-import { Loader } from "@nimbleuikit/atoms/build/utils/Loader";
+import { Box } from "@nimbleuikit/atoms";
+import { ContentLoader } from "@nimbleuikit/atoms/utils";
+import { Loader } from "@nimbleuikit/atoms/utils";
 
 export default function Home() {
   return (

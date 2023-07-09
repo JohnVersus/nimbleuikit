@@ -1,4 +1,3 @@
-import React from "react";
 import { IntlTextProps } from ".";
 import { Text } from "../Text";
 
