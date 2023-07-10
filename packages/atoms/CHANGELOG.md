@@ -1,5 +1,11 @@
 # @nimbleuikit/atoms
 
+## 0.5.3
+
+### Patch Changes
+
+- [`db3d0e0`](https://github.com/JohnVersus/nimbleuikit/commit/db3d0e0947dca8694253ac08c5fba8d03cab42cb) Thanks [@JohnVersus](https://github.com/JohnVersus)! - Testing with src folder
+
 ## 0.5.2
 
 ### Patch Changes

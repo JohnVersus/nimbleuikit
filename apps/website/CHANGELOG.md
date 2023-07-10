@@ -1,5 +1,12 @@
 # website
 
+## 0.1.4
+
+### Patch Changes
+
+- Updated dependencies [[`db3d0e0`](https://github.com/JohnVersus/nimbleuikit/commit/db3d0e0947dca8694253ac08c5fba8d03cab42cb)]:
+  - @nimbleuikit/atoms@0.5.3
+
 ## 0.1.3
 
 ### Patch Changes
