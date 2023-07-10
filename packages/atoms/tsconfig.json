@@ -30,8 +30,8 @@
     "outDir": ".",
     "skipDefaultLibCheck": true,
     "skipLibCheck": true,
-    "stripInternal": true,
-    "declarationMap": true
+    "stripInternal": true
+    // "declarationMap": true
   },
   "include": ["src/**/*"],
   "exclude": [
