@@ -1,5 +1,11 @@
 # @nimbleuikit/atoms
 
+## 0.5.2
+
+### Patch Changes
+
+- [`58b81f8`](https://github.com/JohnVersus/nimbleuikit/commit/58b81f8931d9de01692664fe7878ac6655b397d9) Thanks [@JohnVersus](https://github.com/JohnVersus)! - Fix the exported package files.
+
 ## 0.5.1
 
 ### Patch Changes
