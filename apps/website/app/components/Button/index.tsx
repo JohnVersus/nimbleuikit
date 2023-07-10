@@ -1,4 +1,5 @@
-import { Button, styled, variant } from "@nimbleuikit/atoms";
+import { Button } from "@nimbleuikit/atoms";
+import { styled, variant } from "@nimbleuikit/atoms/utils";
 
 const StyledButton = styled(Button)(
   variant({
