@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import { MasterButton } from "~/components/lib";
-import { styled } from "@nimbleuikit/atoms/utils";
 import { theme } from "~/theme/theme";
 import { Box, FlexBox, Text } from "@nimbleuikit/atoms";
 import Image from "next/image";

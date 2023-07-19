@@ -1,11 +1,9 @@
-import { Box, FlexBox, Text } from "@nimbleuikit/atoms";
-import { styled } from "@nimbleuikit/atoms/utils";
+import { FlexBox, Text } from "@nimbleuikit/atoms";
 import { theme } from "~/theme/theme";
 import { CodeComponent } from "../CodeComponent";
 import { Stats } from "../Stats";
 import { StatsProps } from "../Stats/Stats";
 import { useState } from "react";
-import Image from "next/image";
 
 const PageContent: React.FC<StatsProps> = ({ version, stars }) => {
   const [blink, setBlink] = useState(false);
