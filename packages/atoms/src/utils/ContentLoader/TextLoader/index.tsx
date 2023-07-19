@@ -1,5 +1,5 @@
 import { ContentLoaderProps } from "../types";
-import "./styles.css";
+import "./styles.module.css";
 
 const TextLoader = ({
   width = 400,

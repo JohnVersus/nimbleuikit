@@ -1,5 +1,5 @@
 import { ContentLoaderProps } from "../types";
-import "./styles.css";
+import "./styles.module.css";
 
 const ImageLoader = ({
   width = 200,

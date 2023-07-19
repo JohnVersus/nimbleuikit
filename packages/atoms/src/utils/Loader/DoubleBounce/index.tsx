@@ -1,5 +1,5 @@
 import { LoaderProps } from "../types";
-import "./styles.css";
+import "./styles.module.css";
 
 const DoubleBounce = ({ size, color }: LoaderProps) => (
   <div className="double-bounce-loader">
