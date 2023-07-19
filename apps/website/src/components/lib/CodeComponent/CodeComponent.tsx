@@ -55,6 +55,7 @@ const CodeComponent: React.FC = () => {
         fontColor="accent"
         fontSize="large"
         icon="Copy"
+        id="Copy"
       ></MasterButton>
       {copied && <CopiedMessage>Copied!</CopiedMessage>}
     </CodeBlock>

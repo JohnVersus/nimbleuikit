@@ -4,10 +4,7 @@ import { MasterButton } from "~/components/lib";
 import { styled } from "@nimbleuikit/atoms/utils";
 import { theme } from "~/theme/theme";
 import { Box, FlexBox, Text } from "@nimbleuikit/atoms";
-
-const Logo = styled("img")({
-  height: "50px",
-});
+import Image from "next/image";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +20,13 @@ const NavBar = () => {
     >
       <Link href="/" passHref>
         <FlexBox alignItems={"center"}>
-          <Logo src="/logo.svg" alt="website logo" loading="lazy" />
+          <Image
+            src="/logo.svg"
+            height={50}
+            width={50}
+            alt="website logo"
+            loading="lazy"
+          />
           <Text
             color={theme.colors.accent}
             fontWeight={"bolder"}
@@ -45,6 +48,7 @@ const NavBar = () => {
             fontColor="accent"
             fontSize="large"
             icon="Book"
+            id="Storybook Docs"
           >
             {isOpen ? "" : "Storybook Docs"}
           </MasterButton>
@@ -60,6 +64,7 @@ const NavBar = () => {
             fontColor="accent"
             fontSize="large"
             icon="ChevronsUp"
+            id="Changelog"
           >
             {isOpen ? "" : "Changelog"}
           </MasterButton>
@@ -75,6 +80,7 @@ const NavBar = () => {
             fontColor="accent"
             fontSize="large"
             icon="GitHub"
+            id="GitHub"
           >
             {isOpen ? "" : "GitHub"}
           </MasterButton>
@@ -86,6 +92,7 @@ const NavBar = () => {
           icon={isOpen ? "X" : "Menu"}
           onClick={() => setIsOpen(!isOpen)}
           fontColor="accent"
+          id="Menu"
         ></MasterButton>
       </Box>
     </FlexBox>

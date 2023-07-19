@@ -1,4 +1,5 @@
 import { FlexBox } from "@nimbleuikit/atoms";
+import Image from "next/image";
 import { theme } from "~/theme/theme";
 
 const LoadingScreen = () => {
@@ -26,7 +27,12 @@ const LoadingScreen = () => {
         },
       }}
     >
-      <img src="/logo-loading.svg" alt="Loading..." height={"300px"} />
+      <Image
+        src="/logo-loading.svg"
+        alt="Loading..."
+        height={300}
+        width={300}
+      />
     </FlexBox>
   );
 };

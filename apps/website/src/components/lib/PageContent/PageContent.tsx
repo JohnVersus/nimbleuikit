@@ -4,31 +4,49 @@ import { theme } from "~/theme/theme";
 import { CodeComponent } from "../CodeComponent";
 import { Stats } from "../Stats";
 import { StatsProps } from "../Stats/Stats";
-
-const LogoWrapper = styled(Box)({
-  backgroundImage: "url(/logo.svg)",
-  backgroundSize: "contain",
-  backgroundRepeat: "no-repeat",
-  backgroundPosition: "center",
-  ":hover": {
-    backgroundImage: "url(/logo-blink.svg)",
-  },
-});
+import { useState } from "react";
+import Image from "next/image";
 
 const PageContent: React.FC<StatsProps> = ({ version, stars }) => {
+  const [blink, setBlink] = useState(false);
   return (
     <FlexBox
       flexDirection={"column"}
       justifyContent={"center"}
       alignItems={"center"}
-      marginTop={"2rem"}
       gap={"1rem"}
       minHeight={"60vh"}
     >
-      <LogoWrapper
+      <FlexBox
+        justifyContent={"center"}
+        alignItems={"center"}
+        onMouseOver={() => {
+          setBlink(true);
+        }}
+        onMouseLeave={() => {
+          setBlink(false);
+        }}
         height={["200px", "200px", "200px", "200px", "250px", "400px"]}
         width={["200px", "200px", "200px", "200px", "250px", "400px"]}
-      />
+      >
+        {!blink ? (
+          <img
+            src={"/logo.svg"}
+            width={"100%"}
+            height={"100%"}
+            alt="Logo"
+            loading="lazy"
+          />
+        ) : (
+          <img
+            src={"/logo-blink.svg"}
+            width={"100%"}
+            height={"100%"}
+            alt="Logo Blink"
+            loading="lazy"
+          />
+        )}
+      </FlexBox>
       <Text
         color={theme.colors.accent}
         textAlign={"center"}
