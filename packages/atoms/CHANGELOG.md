@@ -1,5 +1,11 @@
 # @nimbleuikit/atoms
 
+## 0.6.0
+
+### Minor Changes
+
+- [`1f24845`](https://github.com/JohnVersus/nimbleuikit/commit/1f248453796d5a164abcc283ca2b83521f80b184) Thanks [@JohnVersus](https://github.com/JohnVersus)! - Fixed the export files and few changes to utils components.
+
 ## 0.5.3
 
 ### Patch Changes
