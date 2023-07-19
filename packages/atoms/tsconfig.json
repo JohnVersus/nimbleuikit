@@ -21,7 +21,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": false,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "types": ["jest", "node"],
     "rootDir": "src",
     "declaration": true,
@@ -35,8 +35,8 @@
   },
   "include": ["src/**/*"],
   "exclude": [
-    // "src/**/*.stories.tsx",
-    // "src/**/*.test.tsx",
+    "src/**/*.stories.tsx",
+    "src/**/*.test.tsx",
     "node_modules",
     "src/lib/Sample",
     "scripts"

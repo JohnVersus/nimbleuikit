@@ -8,22 +8,11 @@
     "*.d.ts",
     "lib",
     "utils",
-    "src",
     "!**/*.test.*",
     "!**/*.stories.*"
   ],
   "main": "./index.js",
   "types": "./index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./index.js",
-      "types": "./index.d.ts"
-    },
-    "./utils": {
-      "import": "./utils/index.js",
-      "types": "./utils/index.d.ts"
-    }
-  },
   "scripts": {
     "build": "tsc && node scripts/copyCSS.js",
     "ci:publish": "pnpm run build && pnpm publish --access public"
