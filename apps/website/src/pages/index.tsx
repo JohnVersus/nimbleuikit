@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { useState, useEffect } from "react";
 import {
   Background,
@@ -51,16 +52,7 @@ export default function Home() {
 
   return (
     <>
-      <SeoTags
-        title="Nimble UI kit"
-        description=" Nimble UI Kit - Light weight UI kit to create stunning UI systems
-          effortlessly!."
-        favicon="/logo.svg"
-        thumbnailUrl="/thumbnail.png"
-        url="https://nimbleuikit-website.vercel.app/"
-        siteName="Nimble UI kit Website"
-        twitterUsername="_johnversus"
-      />
+      <SeoTags />
       <Background>
         <NavBar />
         <PageContent version={version} stars={stars} />

@@ -12,7 +12,7 @@ const Background = styled("main")({
     left: 0,
     right: 0,
     bottom: 0,
-    background: 'url("/noise.png")',
+    background: 'url("/noise.webp")',
     opacity: 0.4,
     pointerEvents: "none",
   },
