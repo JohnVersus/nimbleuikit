@@ -4,6 +4,7 @@ import { CodeComponent } from "../CodeComponent";
 import { Stats } from "../Stats";
 import { StatsProps } from "../Stats/Stats";
 import { useState } from "react";
+import Image from "next/image";
 
 const PageContent: React.FC<StatsProps> = ({ version, stars }) => {
   const [blink, setBlink] = useState(false);
@@ -28,18 +29,20 @@ const PageContent: React.FC<StatsProps> = ({ version, stars }) => {
         width={["200px", "200px", "200px", "200px", "250px", "400px"]}
       >
         {!blink ? (
-          <img
+          <Image
             src={"/logo.svg"}
-            width={"100%"}
-            height={"100%"}
+            width={"250"}
+            height={"250"}
+            layout="responsive"
             alt="Logo"
             loading="lazy"
           />
         ) : (
-          <img
+          <Image
             src={"/logo-blink.svg"}
-            width={"100%"}
-            height={"100%"}
+            width={"250"}
+            height={"250"}
+            layout="responsive"
             alt="Logo Blink"
             loading="lazy"
           />

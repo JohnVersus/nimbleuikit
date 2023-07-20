@@ -47,7 +47,7 @@ const NavBar = () => {
             fontColor="accent"
             fontSize="large"
             icon="Book"
-            id="Storybook Docs"
+            aria-label="Storybook Docs"
           >
             {isOpen ? "" : "Storybook Docs"}
           </MasterButton>
@@ -63,7 +63,7 @@ const NavBar = () => {
             fontColor="accent"
             fontSize="large"
             icon="ChevronsUp"
-            id="Changelog"
+            aria-label="Changelog"
           >
             {isOpen ? "" : "Changelog"}
           </MasterButton>
@@ -79,7 +79,7 @@ const NavBar = () => {
             fontColor="accent"
             fontSize="large"
             icon="GitHub"
-            id="GitHub"
+            aria-label="GitHub"
           >
             {isOpen ? "" : "GitHub"}
           </MasterButton>
@@ -91,7 +91,7 @@ const NavBar = () => {
           icon={isOpen ? "X" : "Menu"}
           onClick={() => setIsOpen(!isOpen)}
           fontColor="accent"
-          id="Menu"
+          aria-label="Menu"
         ></MasterButton>
       </Box>
     </FlexBox>

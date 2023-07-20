@@ -41,7 +41,7 @@ const Stats: React.FC<StatsProps> = ({ version, stars }) => {
       )}
       {stars && (
         <Link
-          href="https://johnversus.github.io/nimbleuikit/"
+          href="https://github.com/JohnVersus/nimbleuikit"
           passHref
           target="_blank"
           rel="noopener noreferrer"
