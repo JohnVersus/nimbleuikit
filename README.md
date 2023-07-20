@@ -18,9 +18,11 @@ Each package needs to be installed separately. Refer to the individual package R
 
 ## Example component with variants
 
-Here is an example code of a styled Button component with multiple variants like `variantType`, `textSize`, `textColor`, `buttonShape` and some props to add react feather `icons`.
+Here is an example code of a complex styled Button component defined with multiple variants like `variantType`, `textSize`, `textColor`, `buttonShape`, and some props to add react feather `icons`.
 
-The buttons generated using the below component looks like this.
+The buttons generated using the below component look like this.
+![button styles](https://github.com/JohnVersus/nimbleuikit/assets/15834299/d532f6e4-830e-471d-9899-653bbec34a39)
+
 
 ```tsx
 import { Button, ButtonProps } from "@nimbleuikit/atoms";
