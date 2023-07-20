@@ -13,37 +13,40 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    async function fetchGithubStars() {
+    async function fetchData() {
       try {
-        const resGithub = await fetch(
+        const resGithub = fetch(
           "https://api.github.com/repos/JohnVersus/nimbleuikit"
         );
-        const dataGithub = await resGithub.json();
-        setStars(dataGithub.stargazers_count);
+        const resNpm = fetch("https://registry.npmjs.org/@nimbleuikit/atoms");
+
+        const [dataGithub, dataNpm] = await Promise.all([resGithub, resNpm]);
+
+        const githubJson = await dataGithub.json();
+        const npmJson = await dataNpm.json();
+
+        setStars(githubJson.stargazers_count);
+        setVersion(npmJson["dist-tags"].latest);
       } catch (error) {
         console.log(error);
       }
     }
 
-    async function fetchVersion() {
-      try {
-        const resNpm = await fetch(
-          "https://registry.npmjs.org/@nimbleuikit/atoms"
-        );
-        const dataNpm = await resNpm.json();
-        setVersion(dataNpm["dist-tags"].latest);
-      } catch (error) {
-        console.log(error);
-      }
-    }
-
-    fetchGithubStars();
-    fetchVersion();
+    fetchData();
   }, []);
 
   useEffect(() => {
     if (version && stars) setLoading(false);
   }, [version, stars]);
+
+  useEffect(() => {
+    if (loading) {
+      const timer = setTimeout(() => {
+        setLoading(false);
+      }, 500); // You can adjust this value as needed
+      return () => clearTimeout(timer); // Clean up the timer on unmount
+    }
+  }, [loading]);
 
   if (loading) {
     return <LoadingScreen />;

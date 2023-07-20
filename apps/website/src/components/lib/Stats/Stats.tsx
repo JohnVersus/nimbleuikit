@@ -7,7 +7,7 @@ export interface StatsProps {
   stars: number;
 }
 
-const Stats: React.FC<StatsProps> = ({ version, stars }) => {
+const Stats: React.FC<StatsProps> = ({ version = "0.0.1", stars = 1 }) => {
   return (
     <FlexBox justifyContent={"center"} gap={"2rem"}>
       {version && (
