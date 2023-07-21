@@ -23,8 +23,9 @@ const NavBar = () => {
             src="/logo.svg"
             height={50}
             width={50}
-            alt="website logo"
+            alt="Logo"
             loading="lazy"
+            title="Nimble Ui Kit Logo"
           />
           <Text
             color={theme.colors.accent}

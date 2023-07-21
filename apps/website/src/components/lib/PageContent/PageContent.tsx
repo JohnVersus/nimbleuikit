@@ -36,6 +36,7 @@ const PageContent: React.FC<StatsProps> = ({ version, stars }) => {
             layout="responsive"
             alt="Logo"
             loading="lazy"
+            title="Nimble Ui Kit Logo"
           />
         ) : (
           <Image
@@ -55,8 +56,7 @@ const PageContent: React.FC<StatsProps> = ({ version, stars }) => {
         as="h1"
         fontSize={[3, 4, 5, 6]}
       >
-        Nimble UI Kit - Light weight UI kit to create stunning UI systems
-        effortlessly!
+        Nimble UI Kit - Light weight UI kit to create UI systems effortlessly!
       </Text>
       <CodeComponent />
       <Stats version={version} stars={stars} />

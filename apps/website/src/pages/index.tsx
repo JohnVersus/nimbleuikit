@@ -86,6 +86,7 @@ export default function Home() {
           color="#5bbad5"
         ></link>
         <link rel="shortcut icon" href="Icons/favicon.ico"></link>
+        <link rel="canonical" href="https://nimbleuikit-website.vercel.app/" />
         <meta
           name="apple-mobile-web-app-title"
           content="Nimble Ui Kit - Website"

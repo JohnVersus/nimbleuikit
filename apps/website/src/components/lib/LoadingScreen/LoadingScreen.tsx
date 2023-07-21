@@ -5,9 +5,6 @@ import { theme } from "~/theme/theme";
 const LoadingScreen = () => {
   return (
     <FlexBox
-      // position={"fixed"}
-      // top={0}
-      // left={0}
       width={"100%"}
       height={"100vh"}
       justifyContent={"center"}
@@ -20,6 +17,7 @@ const LoadingScreen = () => {
         alt="Loading..."
         height={300}
         width={300}
+        title="Nimble Ui Kit Loading"
       />
     </FlexBox>
   );
