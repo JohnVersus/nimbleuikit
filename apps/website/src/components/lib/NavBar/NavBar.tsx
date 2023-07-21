@@ -24,7 +24,6 @@ const NavBar = () => {
             height={50}
             width={50}
             alt="Logo"
-            loading="lazy"
             title="Nimble Ui Kit Logo"
           />
           <Text

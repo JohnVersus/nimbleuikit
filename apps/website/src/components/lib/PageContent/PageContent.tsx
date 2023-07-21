@@ -44,7 +44,6 @@ const PageContent: React.FC<StatsProps> = ({ version, stars }) => {
             height={"250"}
             layout="responsive"
             alt="Logo Blink"
-            loading="lazy"
           />
         )}
       </FlexBox>
