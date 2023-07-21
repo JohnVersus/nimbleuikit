@@ -15,8 +15,8 @@ const LoadingScreen = () => {
       <Image
         src="/logo-loading.svg"
         alt="Loading..."
-        height={300}
-        width={300}
+        height={150}
+        width={150}
         title="Nimble Ui Kit Loading"
       />
     </FlexBox>
