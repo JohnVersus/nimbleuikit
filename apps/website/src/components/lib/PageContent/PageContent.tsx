@@ -35,7 +35,6 @@ const PageContent: React.FC<StatsProps> = ({ version, stars }) => {
             height={"250"}
             layout="responsive"
             alt="Logo"
-            loading="lazy"
             title="Nimble Ui Kit Logo"
           />
         ) : (
