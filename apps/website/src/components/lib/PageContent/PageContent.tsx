@@ -36,6 +36,7 @@ const PageContent: React.FC<StatsProps> = ({ version, stars }) => {
             loading="eager"
             layout="responsive"
             fetchPriority="high"
+            rel="preload"
             alt="Logo"
             title="Nimble Ui Kit Logo"
           />
