@@ -33,7 +33,9 @@ const PageContent: React.FC<StatsProps> = ({ version, stars }) => {
             src={"/logo.svg"}
             width={"250"}
             height={"250"}
+            loading="eager"
             layout="responsive"
+            fetchPriority="high"
             alt="Logo"
             title="Nimble Ui Kit Logo"
           />
@@ -44,6 +46,7 @@ const PageContent: React.FC<StatsProps> = ({ version, stars }) => {
             height={"250"}
             layout="responsive"
             alt="Logo Blink"
+            loading="lazy"
           />
         )}
       </FlexBox>
