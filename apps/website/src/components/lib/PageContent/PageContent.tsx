@@ -1,10 +1,15 @@
 import { FlexBox, Text } from "@nimbleuikit/atoms";
 import { theme } from "~/theme/theme";
-import { CodeComponent } from "../CodeComponent";
-import { Stats } from "../Stats";
 import { StatsProps } from "../Stats/Stats";
 import { useState } from "react";
 import Image from "next/image";
+import dynamic from "next/dynamic";
+
+const CodeComponent = dynamic(() =>
+  import("../CodeComponent").then((mod) => mod.CodeComponent)
+);
+
+const Stats = dynamic(() => import("../Stats").then((mod) => mod.Stats));
 
 const PageContent: React.FC<StatsProps> = ({ version, stars }) => {
   const [blink, setBlink] = useState(false);
