@@ -27,7 +27,7 @@ const PageContent: React.FC<StatsProps> = ({ version, stars }) => {
           setBlink(false);
         }}
         height={["200px", "200px", "200px", "200px", "250px", "400px"]}
-        width={["200px", "200px", "200px", "200px", "250px", "400px"]}
+        width={["239px", "239px", "239px", "239px", "299px", "478px"]}
       >
         <Link
           href={"/logo.svg"}
@@ -41,7 +41,7 @@ const PageContent: React.FC<StatsProps> = ({ version, stars }) => {
           <Image
             src={"/logo.svg"}
             width={"250"}
-            height={"250"}
+            height={"299"}
             loading="eager"
             layout="responsive"
             fetchPriority="high"
@@ -54,7 +54,7 @@ const PageContent: React.FC<StatsProps> = ({ version, stars }) => {
           <Image
             src={"/logo-blink.svg"}
             width={"250"}
-            height={"250"}
+            height={"299"}
             layout="responsive"
             alt="Logo Blink"
             loading="lazy"

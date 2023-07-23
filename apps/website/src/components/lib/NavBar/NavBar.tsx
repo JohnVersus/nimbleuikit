@@ -21,8 +21,8 @@ const NavBar = () => {
         <FlexBox alignItems={"center"}>
           <Image
             src="/logo.svg"
-            height={50}
-            width={50}
+            width={46}
+            height={55}
             alt="Logo"
             loading="lazy"
             title="Nimble Ui Kit Logo"
