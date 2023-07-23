@@ -49,7 +49,7 @@ jobs:
 
       - name: Build Atoms
         run: pnpm build
-        working-directory: ./packages/atoms
+        working-directory: ./packages/@nimbleuikit/atoms
 
       - name: PR or Publish
         uses: changesets/action@v1
