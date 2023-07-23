@@ -40,8 +40,8 @@ const PageContent: React.FC<StatsProps> = ({ version, stars }) => {
         {!blink ? (
           <Image
             src={"/logo.svg"}
-            width={"250"}
-            height={"299"}
+            width={"46"}
+            height={"55"}
             loading="eager"
             layout="responsive"
             fetchPriority="high"
@@ -53,8 +53,8 @@ const PageContent: React.FC<StatsProps> = ({ version, stars }) => {
         ) : (
           <Image
             src={"/logo-blink.svg"}
-            width={"250"}
-            height={"299"}
+            width={"46"}
+            height={"55"}
             layout="responsive"
             alt="Logo Blink"
             loading="lazy"
