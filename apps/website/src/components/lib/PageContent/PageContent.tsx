@@ -27,7 +27,7 @@ const PageContent: React.FC<StatsProps> = ({ version, stars }) => {
           setBlink(false);
         }}
         height={["200px", "200px", "200px", "200px", "250px", "400px"]}
-        width={["239px", "239px", "239px", "239px", "299px", "478px"]}
+        width={["200px", "200px", "200px", "200px", "250px", "400px"]}
       >
         <Link
           href={"/logo.svg"}
