@@ -33,7 +33,14 @@ const PageContent: React.FC<StatsProps> = ({ version, stars }) => {
         height={["200px", "200px", "200px", "200px", "250px", "400px"]}
         width={["200px", "200px", "200px", "200px", "250px", "400px"]}
       >
-        <Link href={"/logo.svg"} rel="preload" as="image" type="image/svg" />
+        <Link
+          href={"/logo.svg"}
+          rel="preload"
+          as="image"
+          type="image/svg"
+          aria-label="Logo"
+          tabIndex={-1}
+        />
         {!blink ? (
           <Image
             src={"/logo.svg"}
@@ -45,6 +52,7 @@ const PageContent: React.FC<StatsProps> = ({ version, stars }) => {
             rel="preload"
             alt="Logo"
             title="Nimble Ui Kit Logo"
+            priority={true}
           />
         ) : (
           <Image
