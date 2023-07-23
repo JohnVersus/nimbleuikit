@@ -30,7 +30,7 @@ const PageContent: React.FC<StatsProps> = ({ version, stars }) => {
         width={["200px", "200px", "200px", "200px", "250px", "400px"]}
       >
         <Link
-          href={"/logo.svg"}
+          href={"/logo.png"}
           rel="preload"
           as="image"
           type="image/svg"
@@ -39,7 +39,7 @@ const PageContent: React.FC<StatsProps> = ({ version, stars }) => {
         />
         {!blink ? (
           <Image
-            src={"/logo.svg"}
+            src={"/logo.png"}
             width={"46"}
             height={"55"}
             loading="eager"
