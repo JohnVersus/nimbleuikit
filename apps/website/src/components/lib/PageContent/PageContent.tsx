@@ -3,7 +3,6 @@ import { theme } from "~/theme/theme";
 import { StatsProps } from "../Stats/Stats";
 import { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { CodeComponent } from "../CodeComponent";
 import { Stats } from "../Stats";
 
@@ -29,14 +28,6 @@ const PageContent: React.FC<StatsProps> = ({ version, stars }) => {
         height={["200px", "200px", "200px", "200px", "250px", "400px"]}
         width={["200px", "200px", "200px", "200px", "250px", "400px"]}
       >
-        <Link
-          href={"/logo.png"}
-          rel="preload"
-          as="image"
-          type="image/svg"
-          aria-label="Logo"
-          tabIndex={-1}
-        />
         {!blink ? (
           <Image
             src={"/logo.png"}
