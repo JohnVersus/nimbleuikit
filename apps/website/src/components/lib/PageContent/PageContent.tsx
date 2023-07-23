@@ -4,7 +4,7 @@ import { StatsProps } from "../Stats/Stats";
 import { useState } from "react";
 import Image from "next/image";
 import dynamic from "next/dynamic";
-
+import Link from "next/link";
 const CodeComponent = dynamic(() =>
   import("../CodeComponent").then((mod) => mod.CodeComponent)
 );
@@ -33,6 +33,7 @@ const PageContent: React.FC<StatsProps> = ({ version, stars }) => {
         height={["200px", "200px", "200px", "200px", "250px", "400px"]}
         width={["200px", "200px", "200px", "200px", "250px", "400px"]}
       >
+        <Link href={"/logo.svg"} rel="preload" as="image" type="image/svg" />
         {!blink ? (
           <Image
             src={"/logo.svg"}
