@@ -5,7 +5,7 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Github Social Image Generator",
+  title: "Nimble UI Kit",
   description:
     "Nimble UI Kit - Light weight UI kit to create stunning UI systems effortlessly!.",
   themeColor: "#ffffff",
@@ -13,28 +13,28 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: "Nimble UI kit - Website",
-    url: "https://tools.johnversus.dev/github-social-image-generator",
-    title: "Github Social Image Generator",
+    url: "https://nimbleuikit-website.vercel.app/",
+    title: "Nimble UI Kit",
     description:
       "Nimble UI Kit - Light weight UI kit to create stunning UI systems effortlessly!.",
     images: [
       {
-        url: "https://nimbleuikit-website.vercel.app/",
+        url: "/thumbnail.webp",
         width: 1920,
         height: 960,
-        alt: "Github Social Image Generator",
+        alt: "Nimble UI Kit",
       },
     ],
     locale: "en-US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Github Social Image Generator",
+    title: "Nimble UI Kit",
     description:
       "Nimble UI Kit - Light weight UI kit to create stunning UI systems effortlessly!.",
     images: {
-      url: "https://nimbleuikit-website.vercel.app/",
-      alt: "Github Social Image Generator",
+      url: "/thumbnail.webp",
+      alt: "Nimble UI Kit",
     },
   },
   icons: {
