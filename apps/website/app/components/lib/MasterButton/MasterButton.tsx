@@ -1,3 +1,4 @@
+"use client";
 import { Button, ButtonProps } from "@nimbleuikit/atoms";
 import { styled, variant, VariantProps } from "@nimbleuikit/atoms/utils";
 import { theme } from "~/theme/theme";

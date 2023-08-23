@@ -1,3 +1,4 @@
+"use client";
 import { FlexBox, Text } from "@nimbleuikit/atoms";
 import { theme } from "~/theme/theme";
 import { StatsProps } from "../Stats/Stats";
@@ -5,9 +6,21 @@ import { useState } from "react";
 import Image from "next/image";
 import { CodeComponent } from "../CodeComponent";
 import { Stats } from "../Stats";
+import { getPackages } from "../../server/getPackages";
 
-const PageContent: React.FC<StatsProps> = ({ version, stars }) => {
+const PageContent: React.FC<{ getPkgs: typeof getPackages }> = ({
+  getPkgs,
+}) => {
   const [blink, setBlink] = useState(false);
+  const [stars, setStars] = useState(0);
+  const [version, setVersion] = useState("");
+
+  getPkgs().then((data) => {
+    const { githubJson, npmJson } = data;
+    setStars(githubJson.stargazers_count);
+    setVersion(npmJson["dist-tags"].latest);
+  });
+
   return (
     <FlexBox
       flexDirection={"column"}

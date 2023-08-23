@@ -1,3 +1,4 @@
+"use client";
 import { FlexBox, Text } from "@nimbleuikit/atoms";
 import { theme } from "~/theme/theme";
 import { Star } from "react-feather";
