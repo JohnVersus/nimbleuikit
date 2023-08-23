@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import { useState } from "react";
 import { styled } from "@nimbleuikit/atoms/utils";
 import { theme } from "~/theme/theme";

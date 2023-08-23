@@ -1,4 +1,4 @@
-export type LoaderTypes = "image" | "text";
+export declare type LoaderTypes = "image" | "text";
 export interface ContentLoaderProps {
     width?: number;
     height?: number;

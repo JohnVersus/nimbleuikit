@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import { Button, ButtonProps } from "@nimbleuikit/atoms";
 import { styled, variant, VariantProps } from "@nimbleuikit/atoms/utils";
 import { theme } from "~/theme/theme";
@@ -95,7 +95,7 @@ const IconWrapper = styled("div")<{
   iconPosition: "left" | "right";
   hasChildren: boolean;
 }>`
-  padding: ${(props) =>
+  padding: ${(props: { hasChildren: any; iconPosition: string }) =>
     props.hasChildren
       ? props.iconPosition === "right"
         ? "0 0 0 0.5em"

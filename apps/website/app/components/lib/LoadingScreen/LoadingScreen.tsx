@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import { FlexBox } from "@nimbleuikit/atoms";
 import Image from "next/image";
 import { theme } from "~/theme/theme";

@@ -1,5 +1,5 @@
 import { CSSObject } from "styled-components";
-export type StyledProps = {
+export declare type StyledProps = {
     css?: CSSObject | ((theme: any) => CSSObject);
 };
 /**
