@@ -1,5 +1,11 @@
 # @nimbleuikit/atoms
 
+## 0.6.1
+
+### Patch Changes
+
+- [`6b74b34`](https://github.com/JohnVersus/nimbleuikit/commit/6b74b3407869e63f39cf2cb6f01a6b3243a025b0) Thanks [@JohnVersus](https://github.com/JohnVersus)! - Fixed typings
+
 ## 0.6.0
 
 ### Minor Changes
