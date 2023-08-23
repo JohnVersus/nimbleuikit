@@ -8,38 +8,8 @@ import {
 } from "~/components/lib";
 import { ThemeProvider } from "@nimbleuikit/atoms/utils";
 import { theme } from "~/theme/theme";
-import { Suspense } from "react";
 export default function Home() {
-  const [stars, setStars] = useState(0);
-  const [version, setVersion] = useState("");
   const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const resGithub = fetch(
-          "https://api.github.com/repos/JohnVersus/nimbleuikit"
-        );
-        const resNpm = fetch("https://registry.npmjs.org/@nimbleuikit/atoms");
-
-        const [dataGithub, dataNpm] = await Promise.all([resGithub, resNpm]);
-
-        const githubJson = await dataGithub.json();
-        const npmJson = await dataNpm.json();
-
-        setStars(githubJson.stargazers_count);
-        setVersion(npmJson["dist-tags"].latest);
-      } catch (error) {
-        console.log(error);
-      }
-    }
-
-    fetchData();
-  }, []);
-
-  useEffect(() => {
-    if (version && stars) setLoading(false);
-  }, [version, stars]);
 
   useEffect(() => {
     if (loading) {
@@ -59,7 +29,7 @@ export default function Home() {
       <ThemeProvider theme={theme}>
         <Background>
           <NavBar />
-          <PageContent version={version} stars={stars} />
+          <PageContent />
         </Background>
       </ThemeProvider>
     </>

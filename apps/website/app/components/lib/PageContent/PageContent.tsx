@@ -1,12 +1,11 @@
 import { FlexBox, Text } from "@nimbleuikit/atoms";
 import { theme } from "~/theme/theme";
-import { StatsProps } from "../Stats/Stats";
 import { useState } from "react";
 import Image from "next/image";
 import { CodeComponent } from "../CodeComponent";
 import { Stats } from "../Stats";
 
-const PageContent: React.FC<StatsProps> = ({ version, stars }) => {
+const PageContent: React.FC = () => {
   const [blink, setBlink] = useState(false);
   return (
     <FlexBox
@@ -62,7 +61,7 @@ const PageContent: React.FC<StatsProps> = ({ version, stars }) => {
         Nimble UI Kit - Light weight UI kit to create UI systems effortlessly!
       </Text>
       <CodeComponent />
-      <Stats version={version} stars={stars} />
+      <Stats />
     </FlexBox>
   );
 };
