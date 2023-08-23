@@ -8,7 +8,7 @@ import {
 } from "~/components/lib";
 import { ThemeProvider } from "@nimbleuikit/atoms/utils";
 import { theme } from "~/theme/theme";
-
+import { Suspense } from "react";
 export default function Home() {
   const [stars, setStars] = useState(0);
   const [version, setVersion] = useState("");

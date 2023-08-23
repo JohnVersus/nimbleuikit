@@ -8,12 +8,14 @@ export const metadata: Metadata = {
   title: "Nimble UI Kit",
   description:
     "Nimble UI Kit - Light weight UI kit to create stunning UI systems effortlessly!.",
-  themeColor: "#ffffff",
+  themeColor: "#191970",
+  colorScheme: "dark",
+  metadataBase: new URL("https://nimbleuikit-website.vercel.app"),
   manifest: "/Icons/site.webmanifest",
   openGraph: {
     type: "website",
     siteName: "Nimble UI kit - Website",
-    url: "https://nimbleuikit-website.vercel.app/",
+    url: "https://nimbleuikit-website.vercel.app",
     title: "Nimble UI Kit",
     description:
       "Nimble UI Kit - Light weight UI kit to create stunning UI systems effortlessly!.",

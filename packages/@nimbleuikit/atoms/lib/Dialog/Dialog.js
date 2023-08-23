@@ -32,31 +32,30 @@ import { commonSystemProps } from "../system";
  */
 const StyledDialog = styled.dialog({}, ...commonSystemProps);
 const Dialog = ({ isOpen, isModal, onRequestClose, children, ...props }) => {
-    const dialogRef = useRef(null);
-    useEffect(() => {
-        if (dialogRef.current) {
-            isOpen
-                ? isModal
-                    ? dialogRef.current.showModal()
-                    : dialogRef.current.show()
-                : dialogRef.current.close();
-        }
-    }, [isOpen, isModal]);
-    useEffect(() => {
-        const dialogNode = dialogRef.current;
-        if (dialogNode) {
-            const handleCloseEvent = () => {
-                onRequestClose && onRequestClose();
-            };
-            dialogNode.addEventListener("close", handleCloseEvent);
-            return () => {
-                dialogNode.removeEventListener("close", handleCloseEvent);
-            };
-        }
-        else {
-            return;
-        }
-    }, [onRequestClose]);
-    return (_jsx(StyledDialog, { ref: dialogRef, ...props, children: children }));
+  const dialogRef = useRef(null);
+  useEffect(() => {
+    if (dialogRef.current) {
+      isOpen
+        ? isModal
+          ? dialogRef.current.showModal()
+          : dialogRef.current.show()
+        : dialogRef.current.close();
+    }
+  }, [isOpen, isModal]);
+  useEffect(() => {
+    const dialogNode = dialogRef.current;
+    if (dialogNode) {
+      const handleCloseEvent = () => {
+        onRequestClose && onRequestClose();
+      };
+      dialogNode.addEventListener("close", handleCloseEvent);
+      return () => {
+        dialogNode.removeEventListener("close", handleCloseEvent);
+      };
+    } else {
+      return;
+    }
+  }, [onRequestClose]);
+  return _jsx(StyledDialog, { ref: dialogRef, ...props, children: children });
 };
 export default Dialog;

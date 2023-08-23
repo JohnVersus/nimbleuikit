@@ -1,17 +1,9 @@
-import { FlexBox } from "@nimbleuikit/atoms";
 import Image from "next/image";
-import { theme } from "~/theme/theme";
+import styles from "./LoadingScreen.module.css";
 
 const LoadingScreen = () => {
   return (
-    <FlexBox
-      width={"100%"}
-      height={"100vh"}
-      justifyContent={"center"}
-      alignItems={"center"}
-      backgroundColor={theme.colors.primary}
-      opacity={0.8}
-    >
+    <div className={styles.container}>
       <Image
         src="/logo-loading.svg"
         alt="Loading..."
@@ -19,7 +11,7 @@ const LoadingScreen = () => {
         width={150}
         title="Nimble Ui Kit Loading"
       />
-    </FlexBox>
+    </div>
   );
 };
 
