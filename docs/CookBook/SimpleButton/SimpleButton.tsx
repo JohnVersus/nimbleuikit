@@ -2,7 +2,7 @@ import { Button, ButtonProps } from "@nimbleuikit/atoms";
 import { styled, variant, VariantProps } from "@nimbleuikit/atoms/utils";
 import * as Icons from "react-feather";
 
-export type CustomButtonProps = ButtonProps & {
+export type SimpleButtonProps = ButtonProps & {
   variantType?: "primary" | "secondary" | "navigation";
   textSize?: "small" | "medium" | "large";
   textColor?: "primary" | "secondary" | "accent";
@@ -140,14 +140,14 @@ const IconWrapper = styled("div")<{
       : "0"};
 `;
 
-const CustomButton = styled(
+const SimpleButton = styled(
   ({
     icon,
     iconPosition = "right",
     children,
     iconColor = "white",
     ...props
-  }: CustomButtonProps) => {
+  }: SimpleButtonProps) => {
     const Icon = icon ? Icons[icon] : null;
     return (
       <Button {...props}>
@@ -197,4 +197,4 @@ const CustomButton = styled(
   shapeStyle
 );
 
-export default CustomButton;
+export default SimpleButton;

@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { Text } from "@nimbleuikit/atoms";
 const meta: Meta = {
-  title: "CookBook/CustomButton/SourceCode",
+  title: "CookBook/SimpleButton/SourceCode",
   component: Text,
   tags: ["autodocs"],
 };
@@ -14,7 +14,7 @@ export default meta;
  * import { styled, variant, VariantProps } from "@nimbleuikit/atoms/utils";
  * import * as Icons from "react-feather"; // Used for adding Icons in button
  *
- * export type CustomButtonProps = ButtonProps & {
+ * export type SimpleButtonProps = ButtonProps & {
  *   variantType?: "primary" | "secondary" | "navigation";
  *   textSize?: "small" | "medium" | "large";
  *   textColor?: "primary" | "secondary" | "accent";
@@ -152,14 +152,14 @@ export default meta;
  *       : "0"};
  * `;
  *
- * const CustomButton = styled(
+ * const SimpleButton = styled(
  *   ({
  *     icon,
  *     iconPosition = "right",
  *     children,
  *     iconColor = "white",
  *     ...props
- *   }: CustomButtonProps) => {
+ *   }: SimpleButtonProps) => {
  *     const Icon = icon ? Icons[icon] : null;
  *     return (
  *       <Button {...props}>
@@ -209,7 +209,7 @@ export default meta;
  *   shapeStyle
  * );
  *
- * export default CustomButton;
+ * export default SimpleButton;
  *
  * ```
  */
