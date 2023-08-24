@@ -207,7 +207,7 @@ export const IconRight: StoryObj<SimpleInputProps> = {
     icon: "X",
     iconPosition: "right",
     width: "400px",
-    placeholder: "Enter and press X to clear",
+    placeholder: "Enter text",
     inputShape: "square",
     variantType: "primary",
   },
