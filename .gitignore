@@ -39,7 +39,7 @@ yarn-error.log*
 storybook-static
 
 # packages 
-packages/atoms/lib
-packages/atoms/utils
-packages/atoms/*.js
-packages/atoms/*.d.ts*
+packages/@nimbleuikit/atoms/lib
+packages/@nimbleuikit/atoms/utils
+packages/@nimbleuikit/atoms/*.js
+packages/@nimbleuikit/atoms/*.d.ts*
