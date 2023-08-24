@@ -11,7 +11,12 @@ export default meta;
 /**
 ```jsx
 import { Input, InputProps } from "@nimbleuikit/atoms";
-import { styled, variant, VariantProps } from "@nimbleuikit/atoms/utils";
+import {
+  styled,
+  variant,
+  VariantProps,
+  CSSObject,
+} from "@nimbleuikit/atoms/utils";
 import * as Icons from "react-feather";
 
 export type SimpleInputProps = InputProps & {
@@ -22,15 +27,15 @@ export type SimpleInputProps = InputProps & {
   icon?: keyof typeof Icons;
   iconPosition?: "left" | "right";
   iconColor?: string;
-  width?: string;
+  width?: CSSObject["width"];
 };
 
 const colors = {
   primary: "#00B8A9",
   secondary: "#4866FF",
   accent: "#CAFBE7",
-  border: "#D1D5DB", // A neutral border color
-  background: "#F3F4F6", // A neutral background color
+  border: "#D1D5DB",
+  background: "#F3F4F6",
 };
 
 const textColors = {
@@ -47,24 +52,18 @@ const variantStyle = variant<VariantProps>({
   variants: {
     primary: {
       borderColor: colors.primary,
-      backgroundColor: colors.primary,
-      color: "white",
       "&:focus": {
         boxShadow: `0 0 0 2px ${colors.primary}`,
       },
     },
     secondary: {
       borderColor: colors.secondary,
-      backgroundColor: colors.secondary,
-      color: "white",
       "&:focus": {
         boxShadow: `0 0 0 2px ${colors.secondary}`,
       },
     },
     outline: {
       borderColor: colors.border,
-      backgroundColor: colors.background,
-      color: colors.secondary,
       "&:focus": {
         boxShadow: `0 0 0 2px ${colors.accent}`,
       },
@@ -122,29 +121,43 @@ const shapeStyle = variant<VariantProps>({
 
 const IconWrapper = styled("div")<{
   iconPosition: "left" | "right";
+  variantType?: "primary" | "secondary" | "outline";
+  borderRadius: string;
 }>`
   display: inline-flex;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 0;
+  bottom: 0;
+  align-items: center;
+  background-color: ${(props) =>
+    colors[
+      (props.variantType as keyof (typeof props)["variantType"]) || "outline"
+    ]};
+  padding: 8px;
+  border-radius: ${(props) => props.borderRadius};
   ${(props) =>
     props.iconPosition === "left"
       ? `
-            left: 15px;
+            left: 0;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
           `
       : `
-            right: 15px;
+            right: 0;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
           `}
   pointer-events: none;
 `;
 
 const StyledInput = styled(Input)(
   {
-    // default styles
     transition: "all 0.3s ease",
     outline: "none",
     border: "2px solid",
     padding: "12px 15px",
+    width: "100%",
+    boxSizing: "border-box",
     "&:hover": {
       borderColor: colors.secondary,
     },
@@ -168,18 +181,23 @@ const SimpleInput = ({
   const Icon = icon ? Icons[icon] : null;
   const computedIconColor =
     iconColor || (props.variantType === "outline" ? colors.secondary : "white");
+  const borderRadius = radii[props.inputShape || "rounded"];
   return (
     <div style={{ position: "relative", width }}>
       {Icon && (
-        <IconWrapper iconPosition={iconPosition}>
+        <IconWrapper
+          iconPosition={iconPosition}
+          variantType={props.variantType}
+          borderRadius={borderRadius}
+        >
           <Icon color={computedIconColor} />
         </IconWrapper>
       )}
       <StyledInput
         {...props}
         style={{
-          paddingLeft: icon && iconPosition === "left" ? "40px" : undefined,
-          paddingRight: icon && iconPosition === "right" ? "40px" : undefined,
+          paddingLeft: icon && iconPosition === "left" ? "50px" : undefined,
+          paddingRight: icon && iconPosition === "right" ? "50px" : undefined,
         }}
       />
     </div>

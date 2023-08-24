@@ -22,6 +22,10 @@ const meta: Meta<SimpleButtonProps> = {
         options: ["primary", "secondary", "navigation"],
       },
       defaultValue: "primary",
+      table: {
+        category: "Appearance",
+        position: 1,
+      },
     },
     textSize: {
       control: {
@@ -29,6 +33,10 @@ const meta: Meta<SimpleButtonProps> = {
         options: ["small", "medium", "large"],
       },
       defaultValue: "medium",
+      table: {
+        category: "Appearance",
+        position: 2,
+      },
     },
     textColor: {
       control: {
@@ -36,6 +44,10 @@ const meta: Meta<SimpleButtonProps> = {
         options: ["primary", "secondary", "accent"],
       },
       defaultValue: "primary",
+      table: {
+        category: "Appearance",
+        position: 3,
+      },
     },
     buttonShape: {
       control: {
@@ -43,11 +55,19 @@ const meta: Meta<SimpleButtonProps> = {
         options: ["square", "rounded", "ellipse"],
       },
       defaultValue: "rounded",
+      table: {
+        category: "Appearance",
+        position: 4,
+      },
     },
     icon: {
       control: {
         type: "select",
         options: Object.keys(Icons),
+      },
+      table: {
+        category: "Icon",
+        position: 1,
       },
     },
     iconPosition: {
@@ -56,15 +76,64 @@ const meta: Meta<SimpleButtonProps> = {
         options: ["left", "right"],
       },
       defaultValue: "right",
+      table: {
+        category: "Icon",
+        position: 2,
+      },
     },
     iconColor: {
       control: {
         type: "color",
       },
       defaultValue: "white",
+      table: {
+        category: "Icon",
+        position: 3,
+      },
     },
     onClick: {
       action: "clicked",
+      table: {
+        category: "Actions",
+        position: 1,
+      },
+    },
+    children: {
+      table: {
+        category: "Native Button Props",
+        position: 1,
+      },
+    },
+    disabled: {
+      table: {
+        category: "Native Button Props",
+        position: 2,
+      },
+    },
+    as: {
+      table: {
+        category: "Native Button Props",
+        position: 3,
+      },
+    },
+    css: {
+      table: {
+        category: "Native Button Props",
+        position: 4,
+      },
+    },
+    // @ts-ignore
+    theme: {
+      table: {
+        category: "Native Button Props",
+        position: 5,
+      },
+    },
+    forwardedAs: {
+      table: {
+        category: "Native Button Props",
+        position: 6,
+      },
     },
   },
 };

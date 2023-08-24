@@ -22,6 +22,10 @@ const meta: Meta<SimpleInputProps> = {
         options: ["primary", "secondary", "outline"],
       },
       defaultValue: "outline",
+      table: {
+        category: "Design",
+        position: 1,
+      },
     },
     textSize: {
       control: {
@@ -29,6 +33,10 @@ const meta: Meta<SimpleInputProps> = {
         options: ["small", "medium", "large"],
       },
       defaultValue: "medium",
+      table: {
+        category: "Design",
+        position: 2,
+      },
     },
     textColor: {
       control: {
@@ -36,6 +44,10 @@ const meta: Meta<SimpleInputProps> = {
         options: ["primary", "secondary", "accent"],
       },
       defaultValue: "primary",
+      table: {
+        category: "Design",
+        position: 3,
+      },
     },
     inputShape: {
       control: {
@@ -43,11 +55,19 @@ const meta: Meta<SimpleInputProps> = {
         options: ["square", "rounded", "ellipse"],
       },
       defaultValue: "rounded",
+      table: {
+        category: "Design",
+        position: 4,
+      },
     },
     icon: {
       control: {
         type: "select",
         options: Object.keys(Icons),
+      },
+      table: {
+        category: "Icon",
+        position: 1,
       },
     },
     iconPosition: {
@@ -56,18 +76,66 @@ const meta: Meta<SimpleInputProps> = {
         options: ["left", "right"],
       },
       defaultValue: "left",
+      table: {
+        category: "Icon",
+        position: 2,
+      },
     },
     iconColor: {
       control: {
         type: "color",
       },
       defaultValue: "#000",
+      table: {
+        category: "Icon",
+        position: 3,
+      },
     },
     width: {
       control: {
         type: "text",
       },
       defaultValue: "100%",
+      table: {
+        category: "Size",
+        position: 1,
+      },
+    },
+    placeholder: {
+      control: {
+        type: "text",
+      },
+      table: {
+        category: "Native Input Props",
+        position: 1,
+      },
+    },
+    as: {
+      control: {
+        type: "text",
+      },
+      table: {
+        category: "Native Input Props",
+        position: 2,
+      },
+    },
+    children: {
+      control: {
+        type: "text",
+      },
+      table: {
+        category: "Native Input Props",
+        position: 3,
+      },
+    },
+    css: {
+      control: {
+        type: "text",
+      },
+      table: {
+        category: "Native Input Props",
+        position: 4,
+      },
     },
   },
 };
@@ -80,6 +148,7 @@ export default meta;
 export const Basic: StoryObj<SimpleInputProps> = {
   args: {
     placeholder: "Enter text",
+    width: "400px",
   },
 };
 
@@ -89,6 +158,7 @@ export const Basic: StoryObj<SimpleInputProps> = {
 export const Primary: StoryObj<SimpleInputProps> = {
   args: {
     variantType: "primary",
+    width: "400px",
     placeholder: "Primary Input",
   },
 };
@@ -99,6 +169,7 @@ export const Primary: StoryObj<SimpleInputProps> = {
 export const Secondary: StoryObj<SimpleInputProps> = {
   args: {
     variantType: "secondary",
+    width: "400px",
     placeholder: "Secondary Input",
   },
 };
@@ -109,6 +180,7 @@ export const Secondary: StoryObj<SimpleInputProps> = {
 export const Outline: StoryObj<SimpleInputProps> = {
   args: {
     variantType: "outline",
+    width: "400px",
     placeholder: "Outline Input",
   },
 };
@@ -120,7 +192,10 @@ export const IconLeft: StoryObj<SimpleInputProps> = {
   args: {
     icon: "Search",
     iconPosition: "left",
+    width: "400px",
     placeholder: "Search...",
+    inputShape: "square",
+    variantType: "primary",
   },
 };
 
@@ -131,6 +206,9 @@ export const IconRight: StoryObj<SimpleInputProps> = {
   args: {
     icon: "X",
     iconPosition: "right",
+    width: "400px",
     placeholder: "Enter and press X to clear",
+    inputShape: "square",
+    variantType: "primary",
   },
 };

@@ -1,5 +1,10 @@
 import { Input, InputProps } from "@nimbleuikit/atoms";
-import { styled, variant, VariantProps } from "@nimbleuikit/atoms/utils";
+import {
+  styled,
+  variant,
+  VariantProps,
+  CSSObject,
+} from "@nimbleuikit/atoms/utils";
 import * as Icons from "react-feather";
 
 export type SimpleInputProps = InputProps & {
@@ -10,7 +15,7 @@ export type SimpleInputProps = InputProps & {
   icon?: keyof typeof Icons;
   iconPosition?: "left" | "right";
   iconColor?: string;
-  width?: string;
+  width?: CSSObject["width"];
 };
 
 const colors = {
@@ -105,21 +110,30 @@ const shapeStyle = variant<VariantProps>({
 const IconWrapper = styled("div")<{
   iconPosition: "left" | "right";
   variantType?: "primary" | "secondary" | "outline";
+  borderRadius: string;
 }>`
   display: inline-flex;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 0;
+  bottom: 0;
+  align-items: center;
   background-color: ${(props) =>
-    colors[props.variantType || "outline"] || colors.background};
+    colors[
+      (props.variantType as keyof (typeof props)["variantType"]) || "outline"
+    ]};
   padding: 8px;
+  border-radius: ${(props) => props.borderRadius};
   ${(props) =>
     props.iconPosition === "left"
       ? `
             left: 0;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
           `
       : `
             right: 0;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
           `}
   pointer-events: none;
 `;
@@ -155,12 +169,14 @@ const SimpleInput = ({
   const Icon = icon ? Icons[icon] : null;
   const computedIconColor =
     iconColor || (props.variantType === "outline" ? colors.secondary : "white");
+  const borderRadius = radii[props.inputShape || "rounded"];
   return (
     <div style={{ position: "relative", width }}>
       {Icon && (
         <IconWrapper
           iconPosition={iconPosition}
           variantType={props.variantType}
+          borderRadius={borderRadius}
         >
           <Icon color={computedIconColor} />
         </IconWrapper>
