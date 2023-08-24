@@ -7,6 +7,8 @@ import * as Icons from "react-feather";
  * This component offers a variety of customization options to create unique button designs.
  *
  * Refer to [Props Details](?path=/docs/cookbook-custombutton--props-details) for details on the available props.
+ *
+ * Refer to [Source Code](?path=/docs/cookbook-custombutton-sourcecode--documentation) for component code.
  */
 
 const meta: Meta<CustomButtonProps> = {
