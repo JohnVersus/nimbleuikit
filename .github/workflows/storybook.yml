@@ -28,8 +28,9 @@ jobs:
       - name: Install
         run: pnpm install
 
-      - name: Install nimble
-        run: pnpm install @nimbleuikit/atoms@latest --workspace-root
+      - name: Build nimble
+        run: pnpm build
+        working-directory: ./packages/@nimbleuikit/atoms
 
       - name: Install Github Pages
         run: pnpm add -Dw gh-pages
