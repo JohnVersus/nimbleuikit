@@ -3,7 +3,7 @@ on:
     branches:
       - main
     paths:
-      - "docs/*.mdx"
+      - "docs/**"
       - "packages/**"
       # - ".github/workflows/storybook.yml"
 

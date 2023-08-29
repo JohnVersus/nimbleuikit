@@ -1,4 +1,4 @@
-const Table = ({ headers, rows }: { headers: ""[]; rows: ""[][] }) => (
+const Table = ({ headers, rows }: { headers: string[]; rows: string[][] }) => (
   <table>
     <thead>
       <tr>
